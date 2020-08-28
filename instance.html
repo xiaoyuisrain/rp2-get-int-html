@@ -1,29 +1,113 @@
+<html>
+<head>
+<style>
+.tw {
+  text-decoration: underline;
+}
+.int {
+  text-decoration: underline;
+  color: blue;
+}
+.doubt {
+  color: #de6895
+}
 
-<p>Please paraphrase the provided sentence/phrase by substituting
-the (underlined) word and answer the subsequent questions.</p>
+.bef_proceed{
+  display:none;
+}
+.aft_proceed{
+  display:block;
+}
+</style>
+</head>
+<body>
+<p>Please paraphrase the provided sentence or phrase by substituting
+the <span class="doubt">underlined</span> word
+and answer the subsequent questions.</p>
+<p>Please avoid using figurative language.</p>
 <p>If you could not decide on a paraphrase,
-please leave the () blank and provide a reason.
+please enter <span class="doubt">NA</span> and proceed.
 Please note, however, that your submission might be rejected
 if the majority of respondents managed to provide a paraphrase.</p>
+<br />
 
 <form>
 <p>Original sentence:</p>
-<p class="ref">The Conservative manifesto <span class="tw">contained</span> a commitment.</p>
+<p class="ref" id="ref">The Conservative manifesto
+<span class="tw">contained</span> a commitment.</p>
 
-<p>Paraphrase the sentence by replacing the underlined word:</p>
-<p class="pp">The Conservative manifesto <input type="text" name="int" /> a commitment.</p>
+<label for="int0">Substitution:</label>
+<input type="text" name="int0" id="int0"/><br />
 
-<!-- obligatory if paraphrase is provided -->
-<p>If a paraphrase is provided,
-how certain are you of the paraphrase?</p>
-<label>very uncertain</label>
-<label>uncertain</label>
-<label>slightly uncertain</label>
-<label>slightly certain</label>
-<label>certain</label>
+<button type="button" onclick="aft_int0();">Proceed</button>
+
+<!-- if paraphrase is provided -->
+<div class="bef_proceed" id="pp_provided">
+<br />
+<p>Your paraphrase is as follows:</p>
+<p id="display_pp"></p><br />
+
+<!--
+<p>Do you think your paraphrase is literal?
+If not, please provide a literal paraphrase instead.</p>
+-->
+
+<p>How certain are you of the paraphrase?</p>
+<input type="radio" id="uncertain_3" name="certainty" value="-3">
+<label>very uncertain</label><br />
+<input type="radio" id="uncertain_2" name="certainty" value="-2">
+<label>uncertain</label><br />
+<input type="radio" id="uncertain_1" name="certainty" value="-1">
+<label>slightly uncertain</label><br />
+<input type="radio" id="certain_1" name="certainty" value="1">
+<label>slightly certain</label><br />
+<input type="radio" id="certain_2" name="certainty" value="2">
+<label>certain</label><br />
+<input type="radio" id="certain_3" name="certainty" value="3">
 <label>very certain</label>
 
-<!-- obligatory if paraphrase is not provided -->
-<p>If you could not provide a paraphrase, please tell us why:</p>
-<input type="text" name="why_fail" />
+<br /><br />
+<input type="submit" value="Submit">
+</div>
+
+<!-- if paraphrase is not provided -->
+<div class="bef_proceed" id="pp_notprovided">
+<br />
+<p>Please provide the reason that you could not paraphrase
+the given sentence or phrase:</p>
+<textarea name="why_fail"></textarea>
+
+<br /><br />
+<input type="submit" value="Submit">
+</div>
+
 </form>
+<script>
+  function aft_int0(){
+    // Get input int0
+    var value_int0 = document.getElementById("int0").value;
+    if (value_int0.length) {
+      if (value_int0 == 'NA') {
+        // Display step after respondent chooses to give up the task.
+        document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
+        document.getElementById("pp_notprovided").setAttribute("class", "aft_proceed");
+      } else {
+        // Display step after paraphrase is provided.
+        document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
+        document.getElementById("pp_provided").setAttribute("class", "aft_proceed");
+        // Copy reference sentence.
+        document.getElementById("display_pp").innerHTML = document.getElementById("ref").innerHTML;
+        // Replace target word.
+        var word_to_replace = document.getElementById("display_pp").getElementsByClassName("tw")[0];
+        word_to_replace.setAttribute("class", "int");
+        word_to_replace.innerHTML = value_int0; 
+      }
+    } else {
+      // Hide the next step.
+      document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
+      document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
+    }
+  }
+</script>
+</body>
+</html>
