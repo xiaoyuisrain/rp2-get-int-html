@@ -24,7 +24,8 @@
 <p>Please paraphrase the provided sentence or phrase by substituting
 the <span class="doubt">underlined</span> word
 and answer the subsequent questions.</p>
-<p>Please avoid using figurative language.</p>
+<p>Please <span class="doubt">use literal language</span>.</p>
+<p class="doubt">(give an example of how to paraphrase)</p>
 <p>If you could not decide on a paraphrase,
 please enter <span class="doubt">NA</span> and proceed.
 Please note, however, that your submission might be rejected
@@ -53,18 +54,20 @@ If not, please provide a literal paraphrase instead.</p>
 -->
 
 <p>How certain are you of the paraphrase?</p>
-<input type="radio" id="uncertain_3" name="certainty" value="-3">
-<label>very uncertain</label><br />
-<input type="radio" id="uncertain_2" name="certainty" value="-2">
-<label>uncertain</label><br />
-<input type="radio" id="uncertain_1" name="certainty" value="-1">
-<label>slightly uncertain</label><br />
-<input type="radio" id="certain_1" name="certainty" value="1">
-<label>slightly certain</label><br />
+<input type="radio" id="certain_3" name="certainty" value="3">
+<label>very certain</label><br />
 <input type="radio" id="certain_2" name="certainty" value="2">
 <label>certain</label><br />
-<input type="radio" id="certain_3" name="certainty" value="3">
-<label>very certain</label>
+<input type="radio" id="certain_1" name="certainty" value="1">
+<label>slightly certain</label><br />
+<input type="radio" id="uncertain_1" name="certainty" value="-1">
+<label>slightly uncertain</label><br />
+<input type="radio" id="uncertain_2" name="certainty" value="-2">
+<label>uncertain</label><br />
+<input type="radio" id="uncertain_3" name="certainty" value="-3">
+<label>very uncertain</label><br />
+<input type="radio" id="neither" name="certainty" value="0">
+<label>no idea</label><br />
 
 <br /><br />
 <input type="submit" value="Submit">
