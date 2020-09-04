@@ -21,23 +21,25 @@
 </style>
 </head>
 <body>
-<p>Please paraphrase the provided sentence or phrase by substituting
-the <span class="doubt">underlined</span> word
-and answer the subsequent questions.</p>
-<p>Please <span class="doubt">use literal language</span>.</p>
-<p class="doubt">(give an example of how to paraphrase)</p>
+<p>Please paraphrase the sentence or phrase provided below by substituting
+the <span class="tw">target word</span>,
+and answer subsequent questions.</p>
+<p>You could use more than one word to substitute the target word,
+    as long as the paraphrase is grammatically correct.</p>
+<p class="doubt">Please make sure that your paraphrase uses literal language.</p>
 <p>If you could not decide on a paraphrase,
-please enter <span class="doubt">NA</span> and proceed.
+please enter 'NA' and proceed.
 Please note, however, that your submission might be rejected
 if the majority of respondents managed to provide a paraphrase.</p>
 <br />
 
 <form>
 <p>Original sentence:</p>
-<p class="ref" id="ref">The Conservative manifesto
-<span class="tw">contained</span> a commitment.</p>
+<p class="ref" id="ref">The Conservative manifesto <span class="tw">contained</span> a commitment.</p>
 
-<label for="int0">Substitution:</label>
+<p>Target word:<span id="tw_alone"></span></p>
+
+<label for="int0">Replacement:</label>
 <input type="text" name="int0" id="int0"/><br />
 
 <button type="button" onclick="aft_int0();">Proceed</button>
@@ -48,12 +50,16 @@ if the majority of respondents managed to provide a paraphrase.</p>
 <p>Your paraphrase is as follows:</p>
 <p id="display_pp"></p><br />
 
-<!--
-<p>Do you think your paraphrase is literal?
-If not, please provide a literal paraphrase instead.</p>
--->
+<p>How do you think of the literalness of your paraphrase?</p>
+<input type="radio" id="literal" name="literalness" value="1">
+<label>literal</label><br />
+<input type="radio" id="non_literal" name="literalness" value="-1">
+<label>non-literal</label><br />
+<input type="radio" id="not_sure" name="literalness" value="0">
+<label>not sure</label><br />
+<br />
 
-<p>How certain are you of the paraphrase?</p>
+<p>How certain are you that you have provided an apt paraphrase?</p>
 <input type="radio" id="certain_3" name="certainty" value="3">
 <label>very certain</label><br />
 <input type="radio" id="certain_2" name="certainty" value="2">
