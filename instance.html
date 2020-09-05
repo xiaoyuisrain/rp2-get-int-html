@@ -1,6 +1,6 @@
 <html>
 <head>
-<style>
+    <style>
 .tw {
   text-decoration: underline;
 }
@@ -18,7 +18,8 @@
 .aft_proceed{
   display:block;
 }
-</style>
+
+    </style>
 </head>
 <body>
 <div>
@@ -35,76 +36,76 @@
         Please note, however, that your submission might be rejected
         if the majority of respondents managed to provide a paraphrase.</p>
 </div>
-<br />
+<br/>
 
 <form>
     <!-- TODO: add info that facilitates tracing the reference text back to dataset. -->
-<p>Original text:</p>
-<p class="ref" id="ref">The Conservative manifesto <span class="tw">contained</span> a commitment.</p>
+    <p>Original text:</p>
+    <p class="ref" id="ref">The Conservative manifesto <span class="tw">contained</span> a commitment.</p>
 
     <!-- TODO: worker types out the entire paraphrase -->
-<p>Target word:<span id="tw_alone"></span></p>
-<label for="int0">Replacement:</label>
-<input type="text" name="int0" id="int0"/><br />
+    <p>Target word:<span id="tw_alone"></span></p>
+    <label for="int0">Replacement:</label>
+    <input type="text" name="int0" id="int0"/><br/>
 
-<button type="button" onclick="aft_int0();">Proceed</button>
+    <button type="button" onclick="aft_int0();">Proceed</button>
 
-<!-- if paraphrase is provided -->
-<div class="bef_proceed" id="pp_provided">
-<br />
-<p>Your paraphrase is as follows:</p>
-<p id="display_pp"></p><br />
-    <!-- TODO: display warning if words other than target word is changed -->
+    <!-- if paraphrase is provided -->
+    <div class="bef_proceed" id="pp_provided">
+        <br/>
+        <p>Your paraphrase is as follows:</p>
+        <p id="display_pp"></p><br/>
+        <!-- TODO: display warning if words other than target word is changed -->
 
-    <!-- TODO: check how the instruction is usually phrased in literature -->
-    <p>Please indicate how much you agree with the following statements:</p>
+        <!-- TODO: check how the instruction is usually phrased in literature -->
+        <p>Please indicate how much you agree with the following statements:</p>
 
-    <p>Your paraphrase uses <b>literal</b> language.</p>
-    <input type="radio" name="literalness" value="3">
-    <label>completely agree</label><br />
-    <input type="radio" name="literalness" value="2">
-    <label>agree</label><br />
-    <input type="radio" name="literalness" value="1">
-    <label>slightly agree</label><br />
-    <input type="radio" name="literalness" value="0">
-    <label>not sure</label><br />
-    <input type="radio" name="literalness" value="-1">
-    <label>slightly disagree</label><br />
-    <input type="radio" name="literalness" value="-2">
-    <label>disagree</label><br />
-    <input type="radio" name="literalness" value="-3">
-    <label>completely disagree</label><br />
-<br />
+        <p>Your paraphrase uses <b>literal</b> language.</p>
+        <input type="radio" name="literalness" value="3">
+        <label>completely agree</label><br/>
+        <input type="radio" name="literalness" value="2">
+        <label>agree</label><br/>
+        <input type="radio" name="literalness" value="1">
+        <label>slightly agree</label><br/>
+        <input type="radio" name="literalness" value="0">
+        <label>not sure</label><br/>
+        <input type="radio" name="literalness" value="-1">
+        <label>slightly disagree</label><br/>
+        <input type="radio" name="literalness" value="-2">
+        <label>disagree</label><br/>
+        <input type="radio" name="literalness" value="-3">
+        <label>completely disagree</label><br/>
+        <br/>
 
-    <p>You have provided an <b>apt</b> paraphrase of the original text.</p>
-    <input type="radio" name="aptness" value="3">
-    <label>completely agree</label><br />
-    <input type="radio" name="aptness" value="2">
-    <label>agree</label><br />
-    <input type="radio" name="aptness" value="1">
-    <label>slightly agree</label><br />
-    <input type="radio" name="aptness" value="0">
-    <label>not sure</label><br />
-    <input type="radio" name="aptness" value="-1">
-    <label>slightly disagree</label><br />
-    <input type="radio" name="aptness" value="-2">
-    <label>disagree</label><br />
-    <input type="radio" name="aptness" value="-3">
-    <label>completely disagree</label><br />
+        <p>You have provided an <b>apt</b> paraphrase of the original text.</p>
+        <input type="radio" name="aptness" value="3">
+        <label>completely agree</label><br/>
+        <input type="radio" name="aptness" value="2">
+        <label>agree</label><br/>
+        <input type="radio" name="aptness" value="1">
+        <label>slightly agree</label><br/>
+        <input type="radio" name="aptness" value="0">
+        <label>not sure</label><br/>
+        <input type="radio" name="aptness" value="-1">
+        <label>slightly disagree</label><br/>
+        <input type="radio" name="aptness" value="-2">
+        <label>disagree</label><br/>
+        <input type="radio" name="aptness" value="-3">
+        <label>completely disagree</label><br/>
 
-<br /><br />
-<input type="submit" value="Submit">
-</div>
+        <br/><br/>
+        <input type="submit" value="Submit">
+    </div>
 
-<!-- if paraphrase is not provided -->
-<div class="bef_proceed" id="pp_notprovided">
-<br />
-<p>Please provide the reason that you could not paraphrase the given text:</p>
-<textarea name="why_fail"></textarea>
+    <!-- if paraphrase is not provided -->
+    <div class="bef_proceed" id="pp_notprovided">
+        <br/>
+        <p>Please provide the reason that you could not paraphrase the given text:</p>
+        <textarea name="why_fail"></textarea>
 
-<br /><br />
-<input type="submit" value="Submit">
-</div>
+        <br/><br/>
+        <input type="submit" value="Submit">
+    </div>
 
 </form>
 <script>
@@ -133,6 +134,7 @@
       document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
     }
   }
+
 </script>
 </body>
 </html>
