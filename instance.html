@@ -21,24 +21,29 @@
 </style>
 </head>
 <body>
-<p>Please paraphrase the sentence or phrase provided below by substituting
-the <span class="tw">target word</span>,
-and answer subsequent questions.</p>
-<p>You could use more than one word to substitute the target word,
-    as long as the paraphrase is grammatically correct.</p>
-<p class="doubt">Please make sure that your paraphrase uses literal language.</p>
-<p>If you could not decide on a paraphrase,
-please enter 'NA' and proceed.
-Please note, however, that your submission might be rejected
-if the majority of respondents managed to provide a paraphrase.</p>
+<div>
+    <p>Please paraphrase the text provided below
+        by rewording the <span class="tw">target word</span>,
+        and answer subsequent questions.</p>
+    <p>You could use more than one word to substitute the target word,
+        as long as the paraphrase is grammatically correct and natural.</p>
+    <!-- TODO: exemplify using >1 word and insertion to paraphrase -->
+    <p class="doubt">Please make sure that your paraphrase uses literal language.</p>
+    <!-- TODO: add examples of literal and non-literal expressions. -->
+    <p>If you could not decide on a paraphrase,
+        please enter 'NA' and proceed.
+        Please note, however, that your submission might be rejected
+        if the majority of respondents managed to provide a paraphrase.</p>
+</div>
 <br />
 
 <form>
-<p>Original sentence:</p>
+    <!-- TODO: add info that facilitates tracing the reference text back to dataset. -->
+<p>Original text:</p>
 <p class="ref" id="ref">The Conservative manifesto <span class="tw">contained</span> a commitment.</p>
 
+    <!-- TODO: worker types out the entire paraphrase -->
 <p>Target word:<span id="tw_alone"></span></p>
-
 <label for="int0">Replacement:</label>
 <input type="text" name="int0" id="int0"/><br />
 
@@ -49,31 +54,43 @@ if the majority of respondents managed to provide a paraphrase.</p>
 <br />
 <p>Your paraphrase is as follows:</p>
 <p id="display_pp"></p><br />
+    <!-- TODO: display warning if words other than target word is changed -->
 
-<p>How do you think of the literalness of your paraphrase?</p>
-<input type="radio" id="literal" name="literalness" value="1">
-<label>literal</label><br />
-<input type="radio" id="non_literal" name="literalness" value="-1">
-<label>non-literal</label><br />
-<input type="radio" id="not_sure" name="literalness" value="0">
-<label>not sure</label><br />
+    <!-- TODO: check how the instruction is usually phrased in literature -->
+    <p>Please indicate how much you agree with the following statements:</p>
+
+    <p>Your paraphrase uses <b>literal</b> language.</p>
+    <input type="radio" name="literalness" value="3">
+    <label>completely agree</label><br />
+    <input type="radio" name="literalness" value="2">
+    <label>agree</label><br />
+    <input type="radio" name="literalness" value="1">
+    <label>slightly agree</label><br />
+    <input type="radio" name="literalness" value="0">
+    <label>not sure</label><br />
+    <input type="radio" name="literalness" value="-1">
+    <label>slightly disagree</label><br />
+    <input type="radio" name="literalness" value="-2">
+    <label>disagree</label><br />
+    <input type="radio" name="literalness" value="-3">
+    <label>completely disagree</label><br />
 <br />
 
-<p>How certain are you that you have provided an apt paraphrase?</p>
-<input type="radio" id="certain_3" name="certainty" value="3">
-<label>very certain</label><br />
-<input type="radio" id="certain_2" name="certainty" value="2">
-<label>certain</label><br />
-<input type="radio" id="certain_1" name="certainty" value="1">
-<label>slightly certain</label><br />
-<input type="radio" id="uncertain_1" name="certainty" value="-1">
-<label>slightly uncertain</label><br />
-<input type="radio" id="uncertain_2" name="certainty" value="-2">
-<label>uncertain</label><br />
-<input type="radio" id="uncertain_3" name="certainty" value="-3">
-<label>very uncertain</label><br />
-<input type="radio" id="neither" name="certainty" value="0">
-<label>no idea</label><br />
+    <p>You have provided an <b>apt</b> paraphrase of the original text.</p>
+    <input type="radio" name="aptness" value="3">
+    <label>completely agree</label><br />
+    <input type="radio" name="aptness" value="2">
+    <label>agree</label><br />
+    <input type="radio" name="aptness" value="1">
+    <label>slightly agree</label><br />
+    <input type="radio" name="aptness" value="0">
+    <label>not sure</label><br />
+    <input type="radio" name="aptness" value="-1">
+    <label>slightly disagree</label><br />
+    <input type="radio" name="aptness" value="-2">
+    <label>disagree</label><br />
+    <input type="radio" name="aptness" value="-3">
+    <label>completely disagree</label><br />
 
 <br /><br />
 <input type="submit" value="Submit">
@@ -82,8 +99,7 @@ if the majority of respondents managed to provide a paraphrase.</p>
 <!-- if paraphrase is not provided -->
 <div class="bef_proceed" id="pp_notprovided">
 <br />
-<p>Please provide the reason that you could not paraphrase
-the given sentence or phrase:</p>
+<p>Please provide the reason that you could not paraphrase the given text:</p>
 <textarea name="why_fail"></textarea>
 
 <br /><br />
@@ -104,7 +120,7 @@ the given sentence or phrase:</p>
         // Display step after paraphrase is provided.
         document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
         document.getElementById("pp_provided").setAttribute("class", "aft_proceed");
-        // Copy reference sentence.
+        // Copy reference text.
         document.getElementById("display_pp").innerHTML = document.getElementById("ref").innerHTML;
         // Replace target word.
         var word_to_replace = document.getElementById("display_pp").getElementsByClassName("tw")[0];
