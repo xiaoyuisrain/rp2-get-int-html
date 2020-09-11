@@ -1,5 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <title>Paraphrase task</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
     <style>
 .tw {
   text-decoration: underline;
@@ -38,7 +42,7 @@
 </div>
 <br/>
 
-<form>
+<form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'><input type='hidden' value='' name='assignmentId' id='assignmentId'/>
     <!-- TODO: add info that facilitates tracing the reference text back to dataset. -->
     <!-- Consider use data-* attributes, see https://www.w3schools.com/tags/att_global_data.asp -->
     <p>Original text:</p>
@@ -95,7 +99,7 @@
         <label>completely disagree</label><br/>
 
         <br/><br/>
-        <input type="submit" value="Submit">
+        <input type="submit" id="submitButton" value="Submit">
     </div>
 
     <!-- if paraphrase is not provided -->
@@ -105,7 +109,7 @@
         <textarea name="why_fail"></textarea>
 
         <br/><br/>
-        <input type="submit" value="Submit">
+        <input type="submit" id="submitButton" value="Submit">
     </div>
 
 </form>
@@ -137,5 +141,6 @@
   }
 
 </script>
+<script language='Javascript'>turkSetAssignmentID();</script>
 </body>
 </html>
