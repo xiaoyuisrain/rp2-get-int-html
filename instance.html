@@ -4,6 +4,8 @@
     <title>Paraphrase task</title>
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
     <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+    <!-- TODO: self-defined style and script in separate file? -->
+    <script type='text/javascript' src='https://github.com/xiaoyuisrain/collect_interpretations/blob/master/html/action_control.js'></script>
     <style>
 .tw {
   text-decoration: underline;
@@ -113,34 +115,6 @@
     </div>
 
 </form>
-<script>
-  function aft_int0(){
-    // Get input int0
-    var value_int0 = document.getElementById("int0").value;
-    if (value_int0.length) {
-      if (value_int0 == 'NA') {
-        // Display step after respondent chooses to give up the task.
-        document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
-        document.getElementById("pp_notprovided").setAttribute("class", "aft_proceed");
-      } else {
-        // Display step after paraphrase is provided.
-        document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
-        document.getElementById("pp_provided").setAttribute("class", "aft_proceed");
-        // Copy reference text.
-        document.getElementById("display_pp").innerHTML = document.getElementById("ref").innerHTML;
-        // Replace target word.
-        var word_to_replace = document.getElementById("display_pp").getElementsByClassName("tw")[0];
-        word_to_replace.setAttribute("class", "int");
-        word_to_replace.innerHTML = value_int0; 
-      }
-    } else {
-      // Hide the next step.
-      document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
-      document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
-    }
-  }
-
-</script>
 <script language='Javascript'>turkSetAssignmentID();</script>
 </body>
 </html>
