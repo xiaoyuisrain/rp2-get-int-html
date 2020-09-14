@@ -2,7 +2,7 @@ function aft_int0(){
   // Get input int0
   var value_int0 = document.getElementById("int0").value;
   if (value_int0.length) {
-    if (value_int0 == 'NA') {
+    if (value_int0 == document.getElementById("value_na").innerText) {
       // Display step after respondent chooses to give up the task.
       document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
       document.getElementById("pp_notprovided").setAttribute("class", "aft_proceed");
