@@ -4,7 +4,7 @@
     <title>Paraphrase task</title>
     <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
     <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
-    <script type='text/javascript' src='action_controls.js'></script>
+    <script type='text/javascript' src='action_control.js'></script>
     <!-- online version of the script
     <script type='text/javascript' src='https://gistcdn.githack.com/xiaoyuisrain/0041e47aef84471c577b0ead315fed19/raw/7755a4ac3ded392cced40c996f0e945f07c02557/action_controls.js'></script>
     -->
@@ -53,17 +53,15 @@
     <p class="ref" id="ref">The Conservative manifesto <span class="tw">contained</span> a commitment.</p>
 
     <!-- TODO: worker types out the entire paraphrase -->
-    <p>Target word:<span id="tw_alone"></span></p>
-    <label for="int0">Replacement:</label>
-    <input type="text" name="int0" id="int0"/><br/>
+    <p><label for="int0">Your paraphrase:</label></p>
+    <p><input type="text" name="int0" id="int0" size="50"
+              placeholder="Please type out the entire text." /></p>
 
     <button type="button" onclick="aft_int0();">Proceed</button>
 
     <!-- if paraphrase is provided -->
     <div class="bef_proceed" id="pp_provided">
         <br/>
-        <p>Your paraphrase is as follows:</p>
-        <p id="display_pp"></p><br/>
         <!-- TODO: display warning if words other than target word is changed -->
 
         <!-- TODO: check how the instruction is usually phrased in literature -->
