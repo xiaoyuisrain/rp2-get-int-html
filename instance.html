@@ -52,17 +52,16 @@
     <p>Original text:</p>
     <p class="ref" id="ref">The Conservative manifesto <span class="tw">contained</span> a commitment.</p>
 
-    <!-- TODO: worker types out the entire paraphrase -->
     <p><label for="int0">Your paraphrase:</label></p>
     <p><input type="text" name="int0" id="int0" size="50"
-              placeholder="Please type out the entire text." /></p>
+              placeholder="Please type out the entire text." spellcheck="true" /></p>
 
+    <!-- TODO: display warning if words other than target word is changed -->
     <button type="button" onclick="aft_int0();">Proceed</button>
 
     <!-- if paraphrase is provided -->
     <div class="bef_proceed" id="pp_provided">
         <br/>
-        <!-- TODO: display warning if words other than target word is changed -->
 
         <!-- TODO: check how the instruction is usually phrased in literature -->
         <p>Please indicate how much you agree with the following statements:</p>
@@ -108,7 +107,7 @@
     <div class="bef_proceed" id="pp_notprovided">
         <br/>
         <p>Please provide the reason that you could not paraphrase the given text:</p>
-        <textarea name="why_fail"></textarea>
+        <textarea name="why_fail" spellcheck="true" cols="70" rows="5"></textarea>
 
         <br/><br/>
         <input type="submit" id="submitButton" value="Submit">
