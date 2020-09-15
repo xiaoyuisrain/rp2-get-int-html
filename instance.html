@@ -30,14 +30,23 @@
     </style>
 </head>
 <body>
-<div>
-    <p>Please paraphrase the text provided below
-        by rewording the <span class="tw">target word</span>,
-        and answer subsequent questions.</p>
-    <p>You could use more than one word to substitute the target word,
-        as long as the paraphrase is grammatically correct and natural.</p>
-    <!-- TODO: exemplify using >1 word and insertion to paraphrase -->
-    <p class="doubt">Please make sure that your paraphrase uses literal language.</p>
+<div id="instructions">
+    <p>Please paraphrase the text provided below by rewording
+    the <span class="tw">underlined word</span> (the target word),
+    and answer subsequent questions.</p>
+
+    <p>You could use words or phrases in place of the target word,
+    and/or insert words between any of the non-target words in the text;
+    the bottom line is that the non-target words retain their 
+    original word form and word order,
+    and the resulting paraphrase sounds natural
+    and is grammatically acceptable.</p>
+    <p>[Original] She gave him a <span class="tw">bright</span> smile.</p>
+    <p>She gave him a happy and lively smile.</p>
+    <p>She gave him a smile that lightened his mood.</p>
+    <p>She smiled at him, which cheered him up.</p>
+
+    <p>Please also make sure that your paraphrase uses literal language.</p>
     <!-- TODO: add examples of literal and non-literal expressions. -->
     <p>If you could not decide on a paraphrase,
         please enter '<span id="value_na">NA</span>' and proceed.
