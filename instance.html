@@ -9,6 +9,12 @@
     <script type='text/javascript' src='https://gistcdn.githack.com/xiaoyuisrain/0041e47aef84471c577b0ead315fed19/raw/7755a4ac3ded392cced40c996f0e945f07c02557/action_controls.js'></script>
     -->
     <style>
+.eg {
+  padding-left: 50px;
+}
+.wrong {
+  color:red;
+}
 .tw {
   text-decoration: underline;
 }
@@ -41,13 +47,23 @@
     original word form and word order,
     and the resulting paraphrase sounds natural
     and is grammatically acceptable.</p>
-    <p>[Original] She gave him a <span class="tw">bright</span> smile.</p>
-    <p>She gave him a happy and lively smile.</p>
-    <p>She gave him a smile that cheered him up.</p>
-    <p>She smiled at him, which cheered him up.</p>
+    <div class="eg">
+    <p>Example:</p>
+    <p>She gave him a <span class="tw">bright</span> smile.</p>
+    <p>&rarr; &check; She gave him a <span class="int">happy and lively</span> smile.</p>
+    <p>&rarr; &check; She gave him a smile <span class="int">that cheered him up</span>.</p>
+    <p>&rarr; &quest; She <span class="wrong">smiled at</span> him, which cheered him up.</p>
+    </div>
 
     <!-- TODO: explain what are literal and non-literal language -->
-    <p>Please also make sure that your paraphrase uses literal language.</p>
+    <p>In addition, please try your best to use literal language to
+    paraphrase the text.
+    By literal we mean that a text should only contain concepts
+    belonging to the topic under discussion.
+    In particular, please try to avoid using
+    concrete words in an abstract context,
+    or abstract words in a conrete context.
+    <div class="eg">
     <p>Examples of literal sentences:</p>
     <ul>
       <li>I remember once getting a tap round the head from my dad.</li>
@@ -56,10 +72,12 @@
     </ul>
     <p>Examples of non-literal sentences:</p>
     <ul>
-      <li>And tell me, sweet creature, do you count as a toy?</li>
-      <li>No longer can the Government disguise the crisis surrounding electricity privatisation.</li>
-      <li>I wouldn't want her to have a rough time.</li>
+      <li>And tell me, <span class="wrong">sweet</span> creature,
+        do you <span class="wrong">count</span> as a <span class="wrong">toy</span>?</li>
+      <li>No longer can the Government <span class="wrong">disguise</span> the crisis <span class="wrong">surrounding</span> electricity privatisation.</li>
+      <li>I wouldn't want her to have a <span class="wrong">rough</span> time.</li>
     </ul>
+    </div>
 
     <p>If you could not decide on a paraphrase,
         please enter
