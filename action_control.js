@@ -36,9 +36,11 @@ function aft_int0() {
          * at the beginning of tokens0,
          * and remove the latter from tokens0 if the two are the same.
          * */
-        beginner = tokens0.shift();
-        if (value != beginner) {
-          tokens0.unshift(beginner); 
+        if (tokens0.length) {
+          beginner = tokens0.shift();
+          if (value != beginner) {
+            tokens0.unshift(beginner); 
+          }
         }
       }); 
       console.log(tokens0);
