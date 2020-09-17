@@ -38,72 +38,80 @@ input.illustrate{
   display:block;
 }
 
+
+
     </style>
 </head>
 <body>
 <div id="instructions">
     <p>Please paraphrase the text provided below by rewording
-    <span class="tw">the underlined word</span> (the target word),
-    and answer subsequent questions.</p>
+        <span class="tw">the underlined word</span> (the target word),
+        and answer subsequent questions.</p>
 
     <p>You could use words or phrases in place of the target word,
-    and/or insert words between any of the non-target words in the text;
-    the bottom line is that the non-target words retain their 
-    original word form and word order,
-    and the resulting paraphrase sounds natural
-    and is grammatically acceptable.</p>
+        and/or insert words between any of the non-target words in the text;
+        the bottom line is that the non-target words retain their
+        original word form and word order,
+        and the resulting paraphrase sounds natural
+        and is grammatically acceptable.</p>
     <div class="eg">
-      <p>For example, to paraphrase the sentence below:</p>
-      <ul>
-      <li>She gave him a <span class="tw">bright</span> smile.</li>
-      </ul>
-      <p>You could insert one or more words in either or both of the blanks:</p>
-      <ul>
-    <li>She gave him a <input type="text" class="illustrate" disabled />
-    smile <input type="text" class="illustrate" value="that ..." disabled />.</li>
-      </ul>
-    <p>The following changes will not be accepted:</p>
-    <ul>
-      <li>She gave him a <input type="text" class="illustrate" disabled /> 
-      <span class="wrong">grin</span>.</li>
-    <li>She <span class="wrong">smiled at</span> him <input type="text" class="illustrate" disabled />.</li>
-    </ul>
+        <p>For example, to paraphrase the sentence below:</p>
+        <ul>
+            <li>She gave him a <span class="tw">bright</span> smile.</li>
+        </ul>
+        <p>You could insert one or more words in either or both of the blanks:</p>
+        <ul>
+            <li>She gave him a <input type="text" class="illustrate" disabled/>
+                smile <input type="text" class="illustrate" value="that ..." disabled/>.
+            </li>
+        </ul>
+        <p>The following changes will not be accepted:</p>
+        <ul>
+            <li>She gave him a <input type="text" class="illustrate" disabled/>
+                <span class="wrong">grin</span>.
+            </li>
+            <li>She <span class="wrong">smiled at</span> him <input type="text" class="illustrate" disabled/>.</li>
+        </ul>
     </div>
 
     <p>In addition, please try your best to use literal language to
-    paraphrase the text.
-    A literal text expresses meaning directly,
-    and only contains concepts belonging to the topic
-    that the text is about.
-    In particular, it does not use concrete words if the context
-    is abstract,
-    or abstract words if the context is concrete.
-    <div class="eg">
+        paraphrase the text.
+        A literal text expresses meaning directly,
+        and only contains concepts belonging to the topic
+        that the text is about.
+        In particular, it does not use concrete words if the context
+        is abstract,
+        or abstract words if the context is concrete.
+        <div class="eg">
     <p>Examples of literal sentences:</p>
     <ul>
-      <li>I have to go to my country to see my father.</li>
-      <li>Turnbull busies himself with his clipboard as his reply is translated.</li>
-      <li>The diagrams are updated periodically during the course of the simulation.</li>
+        <li>I have to go to my country to see my father.</li>
+        <li>Turnbull busies himself with his clipboard as his reply is translated.</li>
+        <li>The diagrams are updated periodically during the course of the simulation.</li>
     </ul>
     <p>Examples of non-literal sentences:</p>
     <ul>
-      <li>And tell me, <span class="wrong">sweet</span> creature,
-        do you <span class="wrong">count</span> as a <span class="wrong">toy</span>?</li>
-      <li>No longer can the Government <span class="wrong">disguise</span> the crisis <span class="wrong">surrounding</span> electricity privatisation.</li>
-      <li>I wouldn't want her to have a <span class="wrong">rough</span> time.</li>
+        <li>And tell me, <span class="wrong">sweet</span> creature,
+            do you <span class="wrong">count</span> as a <span class="wrong">toy</span>?
+        </li>
+        <li>No longer can the Government <span class="wrong">disguise</span> the crisis <span
+                class="wrong">surrounding</span> electricity privatisation.
+        </li>
+        <li>I wouldn't want her to have a <span class="wrong">rough</span> time.</li>
     </ul>
-    </div>
+</div>
 
-    <p>If you could not decide on a paraphrase,
-        please enter
-        '<span id="value_na">NA</span>' (without the quotation marks)
-        and proceed.
-        Please note, however, that your submission might be rejected
-        if the majority of respondents managed to provide a paraphrase.</p>
+<p>If you could not decide on a paraphrase,
+    please enter
+    '<span id="value_na">NA</span>' (without the quotation marks)
+    and proceed.
+    Please note, however, that your submission might be rejected
+    if the majority of respondents managed to provide a paraphrase.</p>
 </div>
 <br/>
 
-<form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'><input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+<form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'><input
+        type='hidden' value='' name='assignmentId' id='assignmentId'/>
     <!-- TODO: add info that facilitates tracing the reference text back to dataset. -->
     <!-- Consider use data-* attributes, see https://www.w3schools.com/tags/att_global_data.asp -->
     <p>Original text:</p>
@@ -111,7 +119,7 @@ input.illustrate{
 
     <p><label for="int0">Your paraphrase:</label></p>
     <p><input type="text" name="int0" id="int0" size="50"
-              placeholder="Please type out the entire text." spellcheck="true" /></p>
+              placeholder="Please type out the entire text." spellcheck="true"/></p>
 
     <!-- TODO: display warning if words other than target word is changed -->
     <button type="button" onclick="aft_int0();">Proceed</button>
