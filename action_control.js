@@ -1,4 +1,3 @@
-// TODO: function remove punctuations from given string
 var puncs2remove = '.,;?!';
 
 function formatPuncs(string) {
@@ -11,15 +10,17 @@ function formatPuncs(string) {
 }
 
 function aft_int0() {
+  // Get original text excluding target word and punctuations
   var text0_html = document.getElementById("text0").innerHTML;
   var warning = document.getElementById("compare_warn");
   warning.innerHTML = text0_html;
   warning.getElementsByClassName("tw")[0].outerHTML = "";
-  text0_excl = warning.innerText; // original string excl. tw
-  // TODO: get tokens in original text excl. tw
+  text0_excl = formatPuncs(warning.innerText);
+  // Get non-target tokens in original text
+  tokens0 = text0_excl.split(" "); 
   // Get input int0
   var value_int0 = document.getElementById("int0").value;
-    // TODO: compare original and pp
+  // TODO: compare original and pp
   if (value_int0.length) {
     if (value_int0 == document.getElementById("value_na").innerText) {
       // Display step after respondent chooses to give up the task.
