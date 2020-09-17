@@ -20,9 +20,10 @@ function aft_int0() {
   tokens0 = text0_excl.split(" "); 
   // Get input int0
   var value_int0 = document.getElementById("int0").value;
-  // TODO: compare original and pp
   if (value_int0.length) {
     if (value_int0 == document.getElementById("value_na").innerText) {
+      // TODO: compare original and pp
+      tokens1 = formatPuncs(value_int0).split(" ");
       // Display step after respondent chooses to give up the task.
       document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
       document.getElementById("pp_notprovided").setAttribute("class", "aft_proceed");
