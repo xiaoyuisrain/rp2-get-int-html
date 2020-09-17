@@ -9,18 +9,23 @@ function formatPuncs(string) {
     .join('');
 }
 
+function hideElement(element) {
+        element.innerHTML = "";
+        element.setAttribute("class", "bef_proceed");
+}
+
 function aft_int0() {
-  // Get input int0
   var value_int0 = document.getElementById("int0").value;
+  var warning = document.getElementById("compare_warn");
   if (value_int0.length) {
     if (value_int0 == document.getElementById("value_na").innerText) {
       // Display step after respondent chooses to give up the task.
+      hideElement(warning);
       document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
       document.getElementById("pp_notprovided").setAttribute("class", "aft_proceed");
     } else {
       // Get original text excluding target word and punctuations
       var text0_html = document.getElementById("text0").innerHTML;
-      var warning = document.getElementById("compare_warn");
       warning.setAttribute("class", "bef_proceed");
       warning.innerHTML = text0_html;
       warning.getElementsByClassName("tw")[0].outerHTML = "";
@@ -29,8 +34,6 @@ function aft_int0() {
       tokens0 = text0_excl.split(" "); 
       // Split provided paraphrase into tokens
       tokens1 = formatPuncs(value_int0).split(" ");
-      console.log(tokens0);
-      console.log(tokens1);
       tokens1.forEach(function map2Original(value) {
         /* Compare the focus token with the token
          * at the beginning of tokens0,
@@ -43,7 +46,6 @@ function aft_int0() {
           }
         }
       }); 
-      console.log(tokens0);
       // Display warning if there are tokens not removed from tokens0
       if (tokens0.length) {
         warning.innerHTML = "Non-target words might have been modified." +
@@ -53,8 +55,7 @@ function aft_int0() {
           " please ignore this message.";
         warning.setAttribute("class", "aft_proceed wrong");
       } else {
-        warning.innerHTML = "";
-        warning.setAttribute("class", "bef_proceed");
+        hideElement(warning);
       }
       // Display step after paraphrase is provided.
       document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
