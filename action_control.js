@@ -1,4 +1,16 @@
-function aft_int0(){
+// TODO: function remove punctuations from given string
+var puncs2remove = '.,;?!';
+
+function formatPuncs(string) {
+  return string
+    .split('')
+    .filter(function(character) {
+      return puncs2remove.indexOf(character) === -1;
+    })
+    .join('');
+}
+
+function aft_int0() {
   var text0_html = document.getElementById("text0").innerHTML;
   var warning = document.getElementById("compare_warn");
   warning.innerHTML = text0_html;
