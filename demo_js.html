@@ -3,9 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Demo of my javascript</title>
-    <script type='text/javascript' src='action_control.js'></script>
+    <script type="text/javascript" src="action_control.js"></script>
 </head>
 <body>
+
+<p id="str0">She smiled at him, which reminded him of a bright summer day.</p>
+
+<button onclick="getStr1()">Click me</button>
+
+<p id="str1"></p>
+
+<script language="JavaScript">
+    function getStr1() {
+      var str0 = document.getElementById("str0").innerText;
+      document.getElementById("str1").innerHTML = formatPuncs(str0);
+    }
+</script>
 
 </body>
 </html>
