@@ -23,6 +23,7 @@ function aft_int0() {
       vanishElement(warning);
       document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
       document.getElementById("pp_notprovided").setAttribute("class", "aft_proceed");
+      document.getElementById("submit").setAttribute("class", "aft_proceed");
     } else {
       // Get original text excluding target word and punctuations
       var text0_html = document.getElementById("text0").innerHTML;
@@ -60,11 +61,14 @@ function aft_int0() {
       // Display step after paraphrase is provided.
       document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
       document.getElementById("pp_provided").setAttribute("class", "aft_proceed");
+      document.getElementById("submit").setAttribute("class", "aft_proceed");
     }
   } else {
     // Hide the next step.
+    vanishElement(warning);
     document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
     document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
+    document.getElementById("submit").setAttribute("class", "bef_proceed");
   }
 }
 
