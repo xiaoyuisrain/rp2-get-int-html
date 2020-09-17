@@ -11,12 +11,19 @@
 
 <button onclick="getStr1()">Click me</button>
 
-<p id="str1"></p>
+<p id="wo1stToken"></p>
+<p id="getBack1stToken"></p>
 
 <script language="JavaScript">
     function getStr1() {
       var str0 = document.getElementById("str0").innerText;
-      document.getElementById("str1").innerHTML = formatPuncs(str0);
+      tokens0 = str0.split(" ");
+      // Remove the 1st token and display result
+      removed = tokens0.shift();
+      document.getElementById("wo1stToken").innerHTML = tokens0.join(" ");
+      // Get back the 1st token and display result
+      tokens0.unshift(removed);
+      document.getElementById("getBack1stToken").innerHTML = tokens0.join(" ");
     }
 </script>
 
