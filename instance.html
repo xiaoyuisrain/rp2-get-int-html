@@ -9,6 +9,11 @@
     <script type='text/javascript' src='https://gistcdn.githack.com/xiaoyuisrain/0041e47aef84471c577b0ead315fed19/raw/7755a4ac3ded392cced40c996f0e945f07c02557/action_controls.js'></script>
     -->
     <style>
+input.illustrate{
+  border: none;
+  border-bottom: 1px solid black;
+}
+
 .eg {
   padding-left: 50px;
 }
@@ -48,11 +53,21 @@
     and the resulting paraphrase sounds natural
     and is grammatically acceptable.</p>
     <div class="eg">
-    <p>Example:</p>
-    <p>She gave him a <span class="tw">bright</span> smile.</p>
-    <p>&rarr; &check; She gave him a <span class="int">happy and lively</span> smile.</p>
-    <p>&rarr; &check; She gave him a smile <span class="int">that cheered him up</span>.</p>
-    <p>&rarr; &quest; She <span class="wrong">smiled at</span> him, which cheered him up.</p>
+      <p>For example, to paraphrase the sentence below:</p>
+      <ul>
+      <li>She gave him a <span class="tw">bright</span> smile.</li>
+      </ul>
+      <p>You could insert one or more words in either or both of the blanks:</p>
+      <ul>
+    <li>She gave him a <input type="text" class="illustrate" disabled />
+    smile <input type="text" class="illustrate" value="that ..." disabled />.</li>
+      </ul>
+    <p>The following changes will not be accepted:</p>
+    <ul>
+      <li>She gave him a <input type="text" class="illustrate" disabled /> 
+      <span class="wrong">grin</span>.</li>
+    <li>She <span class="wrong">smiled at</span> him <input type="text" class="illustrate" disabled />.</li>
+    </ul>
     </div>
 
     <!-- TODO: literal language is also direct (not metonomic) -->
