@@ -9,7 +9,7 @@ function formatPuncs(string) {
     .join('');
 }
 
-function hideElement(element) {
+function vanishElement(element) {
         element.innerHTML = "";
         element.setAttribute("class", "bef_proceed");
 }
@@ -20,7 +20,7 @@ function aft_int0() {
   if (value_int0.length) {
     if (value_int0 == document.getElementById("value_na").innerText) {
       // Display step after respondent chooses to give up the task.
-      hideElement(warning);
+      vanishElement(warning);
       document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
       document.getElementById("pp_notprovided").setAttribute("class", "aft_proceed");
     } else {
@@ -55,7 +55,7 @@ function aft_int0() {
           " please ignore this message.";
         warning.setAttribute("class", "aft_proceed wrong");
       } else {
-        hideElement(warning);
+        vanishElement(warning);
       }
       // Display step after paraphrase is provided.
       document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
