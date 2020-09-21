@@ -1,3 +1,4 @@
+// TODO: make sure all possible punctuation marks are included
 var puncs2remove = '.,;?!';
 
 function formatPuncs(string) {
