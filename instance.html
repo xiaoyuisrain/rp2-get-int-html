@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Paraphrase task</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <style>
+  <title>Paraphrase task</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style>
 #submit {
   padding-top: 30pt;
 }
@@ -36,136 +36,100 @@ input.illustrate{
 .aft_proceed{
   display:block;
 }
-
-
-
-    </style>
+  </style>
 </head>
 <body>
-  <!-- TODO: one sentence or paragraph per line -->
-<div id="instructions">
-    <p>Please paraphrase the text provided below by rewording
-        <span class="tw">the underlined word</span> (the target word),
-        and answer subsequent questions.</p>
+  <div id="instructions">
+    <p>Please paraphrase the text provided below by rewording <span class="tw">the underlined word</span> (the target word), and answer subsequent questions.</p>
+    <p>You could use words or phrases in place of the target word, and/or insert words between any of the non-target words in the text, as long as the non-target words retain their original word form and word order, and the resulting paraphrase sounds natural and is grammatically acceptable.</p>
 
-    <p>You could use words or phrases in place of the target word,
-        and/or insert words between any of the non-target words in the text,
-        as long as the non-target words retain their
-        original word form and word order,
-        and the resulting paraphrase sounds natural
-        and is grammatically acceptable.</p>
     <div class="eg">
-        <p>For example, to paraphrase the sentence below:</p>
-        <ul>
-            <li>The artist has <span class="tw">captured</span> her perfectly.</li>
-        </ul>
-        <p>You could insert one or more words in one or all of the blanks:</p>
-        <ul>
-            <li>The artist has <input type="text" class="illustrate" disabled/> her <input type="text" class="illustrate" disabled/> perfectly <input type="text" class="illustrate" disabled/>.</li>
-        </ul>
-        <p>The following changes will not be accepted:</p>
-        <ul>
-          <li>The artist has <input type="text" class="illustrate" disabled/> her <span class="wrong">precisely</span>.</li>
-          <li><span class="wrong">She</span> has been <input type="text" class="illustrate" disabled/> <span class="wrong">by the artist</span>.</li>
-        </ul>
+      <p>For example, to paraphrase the sentence below:</p>
+      <ul>
+        <li>The artist has <span class="tw">captured</span> her perfectly.</li>
+      </ul>
+      <p>You could insert one or more words in one or all of the blanks:</p>
+      <ul>
+        <li>The artist has <input type="text" class="illustrate" disabled/> her <input type="text" class="illustrate" disabled/> perfectly <input type="text" class="illustrate" disabled/>.</li>
+      </ul>
+      <p>The following changes will not be accepted:</p>
+      <ul>
+        <li>The artist has <input type="text" class="illustrate" disabled/> her <span class="wrong">precisely</span>.</li>
+        <li><span class="wrong">She</span> has been <input type="text" class="illustrate" disabled/> <span class="wrong">by the artist</span>.</li>
+      </ul>
     </div>
 
-    <p>In addition, please try your best to use literal language to
-        paraphrase the text.
-        A literal text expresses meaning directly,
-        and only contains concepts belonging to the topic
-        that the text is about.
-        In particular, it does not use concrete words if the context
-        is abstract,
-        or abstract words if the context is concrete.</p>
-        <div class="eg">
-    <p>Examples of literal sentences:</p>
-    <ul>
+    <p>In addition, please try your best to use literal language to paraphrase the text. A literal text expresses meaning directly, and only contains concepts belonging to the topic that the text is about. In particular, it does not use concrete words if the context is abstract, or abstract words if the context is concrete.</p>
+
+    <div class="eg">
+      <p>Examples of literal sentences:</p>
+      <ul>
         <li>I have to go to my country to see my father.</li>
         <li>Turnbull busies himself with his clipboard as his reply is translated.</li>
         <li>The diagrams are updated periodically during the course of the simulation.</li>
-    </ul>
-    <p>Examples of non-literal sentences:</p>
-    <ul>
-        <li>And tell me, <span class="wrong">sweet</span> creature,
-            do you <span class="wrong">count</span> as a <span class="wrong">toy</span>?
-        </li>
-        <li>No longer can the Government <span class="wrong">disguise</span> the crisis <span
-                class="wrong">surrounding</span> electricity privatisation.
-        </li>
+      </ul>
+      <p>Examples of non-literal sentences:</p>
+      <ul>
+        <li>And tell me, <span class="wrong">sweet</span> creature, do you <span class="wrong">count</span> as a <span class="wrong">toy</span>?</li>
+        <li>No longer can the Government <span class="wrong">disguise</span> the crisis <span class="wrong">surrounding</span> electricity privatisation.</li>
         <li>I wouldn't want her to have a <span class="wrong">rough</span> time.</li>
-    </ul>
-</div>
-
-<p>If you could not decide on a paraphrase,
-    please enter
-    '<span id="value_na">NA</span>' (without the quotation marks)
-    and proceed.
-    Please note, however, that your submission might be rejected
-    if the majority of respondents managed to provide a paraphrase.</p>
-</div>
-<br/>
-
-<form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'><input
-        type='hidden' value='' name='assignmentId' id='assignmentId'/>
+      </ul>
+    </div>
+    
+    <p>If you could not decide on a paraphrase, please enter '<span id="value_na">NA</span>' (without the quotation marks) and proceed. Please note, however, that your submission might be rejected if the majority of respondents managed to provide a paraphrase.</p>
+  </div>
+  <br/>
+  <form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'>
+    <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
     <p>Original text:</p>
     <p class="ref" id="text0">The Conservative manifesto <span class="tw">contained</span> a commitment.</p>
-
     <p><label for="int0">Your paraphrase:</label></p>
-    <p><input type="text" name="int0" id="int0" size="50"
-              placeholder="Please type out the entire text." spellcheck="true"/></p>
-
+    <p><input type="text" name="int0" id="int0" size="50" placeholder="Please type out the entire text." spellcheck="true"/></p>
     <button type="button" onclick="aft_int0();">Proceed</button>
-
     <p class="bef_proceed" id="compare_warn"></p>
-
-    <!-- if paraphrase is provided -->
+  
     <div class="bef_proceed" id="pp_provided">
-        <br/>
-
-        <p>Please indicate how much you agree with the following statements:</p>
-
-        <p>Your paraphrase uses <b>literal</b> language.</p>
-        <input type="radio" name="literalness" value="2">
-        <label>strongly agree</label><br/>
-        <input type="radio" name="literalness" value="1">
-        <label>agree</label><br/>
-        <input type="radio" name="literalness" value="0">
-        <label>not sure</label><br/>
-        <input type="radio" name="literalness" value="-1">
-        <label>disagree</label><br/>
-        <input type="radio" name="literalness" value="-2">
-        <label>strongly disagree</label><br/>
-        <br/>
-
-        <p>You have provided an <b>apt</b> paraphrase of the original text.</p>
-        <input type="radio" name="aptness" value="2">
-        <label>strongly agree</label><br/>
-        <input type="radio" name="aptness" value="1">
-        <label>agree</label><br/>
-        <input type="radio" name="aptness" value="0">
-        <label>not sure</label><br/>
-        <input type="radio" name="aptness" value="-1">
-        <label>disagree</label><br/>
-        <input type="radio" name="aptness" value="-2">
-        <label>strongly disagree</label><br/>
+      <br/>
+      <p>Please indicate how much you agree with the following statements:</p>
+      <p>Your paraphrase uses <b>literal</b> language.</p>
+      <input type="radio" name="literalness" value="2">
+      <label>strongly agree</label><br/>
+      <input type="radio" name="literalness" value="1">
+      <label>agree</label><br/>
+      <input type="radio" name="literalness" value="0">
+      <label>not sure</label><br/>
+      <input type="radio" name="literalness" value="-1">
+      <label>disagree</label><br/>
+      <input type="radio" name="literalness" value="-2">
+      <label>strongly disagree</label><br/>
+      <br/>
+      <p>You have provided an <b>apt</b> paraphrase of the original text.</p>
+      <input type="radio" name="aptness" value="2">
+      <label>strongly agree</label><br/>
+      <input type="radio" name="aptness" value="1">
+      <label>agree</label><br/>
+      <input type="radio" name="aptness" value="0">
+      <label>not sure</label><br/>
+      <input type="radio" name="aptness" value="-1">
+      <label>disagree</label><br/>
+      <input type="radio" name="aptness" value="-2">
+      <label>strongly disagree</label><br/>
     </div>
-
-    <!-- if paraphrase is not provided -->
+  
     <div class="bef_proceed" id="pp_notprovided">
-        <br/>
-        <p>Please provide the reason that you could not paraphrase the given text:</p>
-        <textarea name="why_fail" spellcheck="true" cols="70" rows="5"></textarea>
+      <br/>
+      <p>Please provide the reason that you could not paraphrase the given text:</p>
+      <textarea name="why_fail" spellcheck="true" cols="70" rows="5"></textarea>
     </div>
-
+  
     <div class="bef_proceed" id="submit">
-        <input type="submit" id="submitButton" value="Submit">
+      <input type="submit" id="submitButton" value="Submit">
     </div>
+  </form>
 
-</form>
-<script language='Javascript'>turkSetAssignmentID();</script>
-
-<script type="text/javascript" src="https://s3.amazonaws.com/mturk-public/externalHIT_v1.js"></script>
-<script id="myScript" type="text/javascript" src="action_control.js"></script>
+  <script language='Javascript'>turkSetAssignmentID();</script>
+  
+  <script type="text/javascript" src="https://s3.amazonaws.com/mturk-public/externalHIT_v1.js"></script>
+  <script id="myScript" type="text/javascript" src="action_control.js"></script>
 </body>
 </html>
