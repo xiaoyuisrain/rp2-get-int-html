@@ -90,30 +90,17 @@ input.illustrate{
   
     <div class="bef_proceed" id="pp_provided">
       <br/>
-      <p>Please indicate how much you agree with the following statements:</p>
-      <p>Your paraphrase uses <b>literal</b> language.</p>
-      <input type="radio" name="literalness" value="2">
-      <label>strongly agree</label><br/>
-      <input type="radio" name="literalness" value="1">
-      <label>agree</label><br/>
-      <input type="radio" name="literalness" value="0">
-      <label>not sure</label><br/>
-      <input type="radio" name="literalness" value="-1">
-      <label>disagree</label><br/>
-      <input type="radio" name="literalness" value="-2">
-      <label>strongly disagree</label><br/>
-      <br/>
-      <p>You have provided an <b>apt</b> paraphrase of the original text.</p>
-      <input type="radio" name="aptness" value="2">
-      <label>strongly agree</label><br/>
-      <input type="radio" name="aptness" value="1">
-      <label>agree</label><br/>
-      <input type="radio" name="aptness" value="0">
-      <label>not sure</label><br/>
-      <input type="radio" name="aptness" value="-1">
-      <label>disagree</label><br/>
-      <input type="radio" name="aptness" value="-2">
-      <label>strongly disagree</label><br/>
+      <p>Please use the sliders below to indicate how much you agree with the statements (1 = strongly disagree, 5 = strongly agree).</p>
+      <ul>
+        <li>
+          <p>Your paraphrase uses <b>literal</b> language.</p>
+          <p><crowd-slider name="literalness" min="1" max="5" step="1" pin></crowd-slider></p>
+        </li>
+        <li>
+          <p>You have provided an <b>apt</b> paraphrase of the original text.</p>
+          <p><crowd-slider name="aptness" min="1" max="5" step="1" pin></crowd-slider></p>
+        </li>
+      </ul>
     </div>
   
     <div class="bef_proceed" id="pp_notprovided">
