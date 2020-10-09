@@ -39,6 +39,8 @@ input.illustrate{
   </style>
 </head>
 <body>
+  <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+  <crowd-form answer-format="flatten-objects">
   <div id="instructions">
     <p>Please paraphrase the text provided below by rewording <span class="tw">the underlined word</span> (the target word), and answer subsequent questions.</p>
     <p>You could use words or phrases in place of the target word, and/or insert words between any of the non-target words in the text, as long as the non-target words retain their original word form and word order, and the resulting paraphrase sounds natural and is grammatically acceptable.</p>
@@ -79,8 +81,6 @@ input.illustrate{
     <p>If you could not decide on a paraphrase, please enter '<span id="value_na">NA</span>' (without the quotation marks) and proceed. Please note, however, that your submission might be rejected if the majority of respondents managed to provide a paraphrase.</p>
   </div>
   <br/>
-  <form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'>
-    <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
     <p>Original text:</p>
     <p class="ref" id="text0">The Conservative manifesto <span class="tw">contained</span> a commitment.</p>
     <p><label for="int0">Your paraphrase:</label></p>
@@ -122,14 +122,7 @@ input.illustrate{
       <textarea name="why_fail" spellcheck="true" cols="70" rows="5"></textarea>
     </div>
   
-    <div class="bef_proceed" id="submit">
-      <input type="submit" id="submitButton" value="Submit">
-    </div>
-  </form>
-
-  <script type="text/javascript" src="https://s3.amazonaws.com/mturk-public/externalHIT_v1.js"></script>
-  <script language='Javascript'>turkSetAssignmentID();</script>
-  
   <script id="myScript" type="text/javascript" src="action_control.js"></script>
+  </crowd-form>
 </body>
 </html>
