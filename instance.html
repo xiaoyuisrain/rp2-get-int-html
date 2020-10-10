@@ -42,8 +42,20 @@ input.illustrate{
   <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
   <script id="myScript" type="text/javascript" src="action_control.js"></script>
   <crowd-form answer-format="flatten-objects">
-  <div id="instructions">
-    <p>Please paraphrase the text provided below by rewording <span class="tw">the underlined word</span> (the target word), and answer subsequent questions.</p>
+    <short-instructions>
+      <p>Paraphrase the given text and answer subsequent questions.</p>
+      <p>
+      Your paraphrase should:
+      <ol>
+        <li>Retain the word form and word order of the non-target words.</li>
+        <li>Use literal language as much as possible.</li>
+        <li>Sound natural and be grammatically acceptable.</li>
+      </ol>
+      </p>
+      <p><i>Please read the full instructions carefully before working on the task.</i></p>
+    </short-instructions>
+    <full-instructions header="Full instructions of the paraphrasing task">
+    <p>Please paraphrase the given text by rewording <span class="tw">the underlined word</span> (the target word).</p>
     <p>You could use words or phrases in place of the target word, and/or insert words between any of the non-target words in the text, as long as the non-target words retain their original word form and word order, and the resulting paraphrase sounds natural and is grammatically acceptable.</p>
 
     <div class="eg">
@@ -80,6 +92,8 @@ input.illustrate{
     </div>
     
     <p>If you could not decide on a paraphrase, please enter '<span id="value_na">NA</span>' (without the quotation marks) and proceed. Please note, however, that your submission might be rejected if the majority of respondents managed to provide a paraphrase.</p>
+    </full-instructions>
+  <div id="instructions">
   </div>
   <br/>
     <p>Original text:</p>
