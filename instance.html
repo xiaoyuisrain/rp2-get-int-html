@@ -22,9 +22,6 @@ input.illustrate{
   text-decoration: underline;
   color: blue;
 }
-.doubt {
-  color: #de6895
-}
 
 .bef_proceed{
   display:none;
@@ -32,6 +29,11 @@ input.illustrate{
 .aft_proceed{
   display:block;
 }
+
+div.aft_proceed{
+  margin-top: 65px;
+}
+
   </style>
 </head>
 <body>
@@ -106,32 +108,30 @@ input.illustrate{
     <p class="bef_proceed" id="compare_warn"></p>
   
     <div class="bef_proceed" id="pp_provided">
-      <br/>
       <p>Please use the sliders below to indicate how much you agree with the statements (1 = strongly disagree, 5 = strongly agree).</p>
       <ul>
         <li>
           <p>Your paraphrase uses <b>literal</b> language.</p>
           <p><crowd-slider name="literalness" min="1" max="5" step="1" pin></crowd-slider></p>
-          <p>Could you tell us more about your rating? (Optional)</p>
+          <span>Could you tell us more about your rating? (Optional)</span>
           <crowd-text-area name="reason_lit" spellcheck="true" rows="1"></crowd-text-area>
         </li>
         <li>
           <p>You have provided an <b>apt</b> paraphrase of the original text.</p>
           <p><crowd-slider name="aptness" min="1" max="5" step="1" pin></crowd-slider></p>
-          <p>Could you tell us more about your rating? (Optional)</p>
+          <span>Could you tell us more about your rating? (Optional)</span>
           <crowd-text-area name="reason_apt" spellcheck="true" rows="1"></crowd-text-area>
         </li>
       </ul>
     </div>
   
     <div class="bef_proceed" id="pp_notprovided">
-      <br/>
-      <p>Please provide the reason(s) that you could not paraphrase the given text:</p>
-      <crowd-text-area name="reason_na" spellcheck="true" rows="2"></crowd-text-area>
+      <span>Please provide the reason(s) that you could not paraphrase the given text:</span>
+      <crowd-text-area name="reason_na" spellcheck="true" rows="1"></crowd-text-area>
     </div>
 
     <div class="bef_proceed" id="comments_regardless">
-      <p>If you have any comments/feeback on this task, you can leave them below. This is optional, but your help will be appreciated.</p>
+      <span>If you have any comments/feeback on this task, you can leave them below. This is optional, but your help will be appreciated.</span>
       <crowd-text-area name="comments" rows="1"></crowd-text-area>
     </div>
   </crowd-form>
