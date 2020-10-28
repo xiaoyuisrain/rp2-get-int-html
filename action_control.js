@@ -19,6 +19,7 @@ function aft_int0() {
   var value_int0 = document.getElementById("int0").value;
   var warning = document.getElementById("compare_warn");
   if (value_int0.length) {
+      document.getElementById("comments_regardless").setAttribute("class", "aft_proceed");
     if (value_int0 == document.getElementById("value_na").innerText) {
       // Display step after respondent chooses to give up the task.
       vanishElement(warning);
@@ -67,6 +68,7 @@ function aft_int0() {
     vanishElement(warning);
     document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
     document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
+    document.getElementById("comments_regardless").setAttribute("class", "bef_proceed");
   }
 }
 
