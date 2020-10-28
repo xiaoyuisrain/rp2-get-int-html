@@ -93,13 +93,17 @@ input.illustrate{
     
     <p>If you could not decide on a paraphrase, please enter '<span id="value_na">NA</span>' (without the quotation marks) and proceed. Please note, however, that your submission might be rejected if the majority of respondents managed to provide a paraphrase.</p>
     </full-instructions>
-  <div id="instructions">
-  </div>
-  <br/>
-    <p>Original text:</p>
-    <p class="ref" id="text0">The Conservative manifesto <span class="tw">contained</span> a commitment.</p>
-    <p><label for="int0">Your paraphrase:</label></p>
-    <p><input type="text" name="int0" id="int0" size="50" placeholder="Please type out the entire text." spellcheck="true"/></p>
+    <div id="mainTask">
+      <p>Please read the instructions and complete the paraphrasing task below.</p>
+      <p>
+      <strong>Original text: </strong>
+      <span class="ref" id="text0">The Conservative manifesto <span class="tw">contained</span> a commitment.</span>
+      </p>
+      <p>
+      <strong>Your paraphrase: </strong>
+      <crowd-input id="int0" name="paraphrase" placeholder="Please type out the entire text." spellcheck="true" required></crowd-input>
+      </p>
+    </div>
     <crowd-button onclick="aft_int0();">
       Proceed
     </crowd-button>
