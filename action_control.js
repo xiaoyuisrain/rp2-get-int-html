@@ -25,6 +25,8 @@ function aft_int0() {
       vanishElement(warning);
       document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
       document.getElementById("pp_notprovided").setAttribute("class", "aft_proceed");
+      // Reason for giving the task must be provided
+      document.getElementsByName("reason_na")[0].required = true;
     } else {
       // Get original text excluding target word and punctuations
       var text0_html = document.getElementById("text0").innerHTML;
