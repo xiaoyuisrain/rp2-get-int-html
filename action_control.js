@@ -21,8 +21,10 @@ function aft_int0() {
   // Reset `required` attributes
   document.getElementsByName("reason_na")[0].required = false;
   document.getElementsByName("reason_apt")[0].required = false;
+  // Proceed if > 0 char is entered
   if (value_int0.length) {
-      document.getElementById("comments_regardless").setAttribute("class", "aft_proceed");
+    // Display the div asking for general comments
+    document.getElementById("comments_regardless").setAttribute("class", "aft_proceed");
     if (value_int0 == document.getElementById("value_na").innerText) {
       // Display step after respondent chooses to give up the task.
       vanishElement(warning);
@@ -71,7 +73,7 @@ function aft_int0() {
       }
     }
   } else {
-    // Hide the next step.
+    // Hide the next step
     vanishElement(warning);
     document.getElementById("pp_provided").setAttribute("class", "bef_proceed");
     document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
