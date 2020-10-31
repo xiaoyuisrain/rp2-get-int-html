@@ -18,6 +18,9 @@ function vanishElement(element) {
 function aft_int0() {
   var value_int0 = document.getElementById("int0").value;
   var warning = document.getElementById("compare_warn");
+  // Reset `required` attributes
+  document.getElementsByName("reason_na")[0].required = false;
+  document.getElementsByName("reason_apt")[0].required = false;
   if (value_int0.length) {
       document.getElementById("comments_regardless").setAttribute("class", "aft_proceed");
     if (value_int0 == document.getElementById("value_na").innerText) {
@@ -28,6 +31,11 @@ function aft_int0() {
       // Reason for giving the task must be provided
       document.getElementsByName("reason_na")[0].required = true;
     } else {
+      // Display step after paraphrase is provided
+      document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
+      document.getElementById("pp_provided").setAttribute("class", "aft_proceed");
+      // Reason for aptness rating must be provided
+      document.getElementsByName("reason_apt")[0].required = true;
       // Get original text excluding target word and punctuations
       var text0_html = document.getElementById("text0").innerHTML;
       warning.setAttribute("class", "bef_proceed");
@@ -61,9 +69,6 @@ function aft_int0() {
       } else {
         vanishElement(warning);
       }
-      // Display step after paraphrase is provided.
-      document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
-      document.getElementById("pp_provided").setAttribute("class", "aft_proceed");
     }
   } else {
     // Hide the next step.
