@@ -20,7 +20,7 @@ function aft_int0() {
   var warning = document.getElementById("compare_warn");
   // Reset `required` attributes
   document.getElementsByName("reason_na")[0].required = false;
-  document.getElementsByName("reason_apt")[0].required = false;
+  document.getElementsByName("reason_difficulty")[0].required = false;
   // Proceed if > 0 char is entered
   if (value_int0.length) {
     // Display the div asking for general comments
@@ -37,7 +37,7 @@ function aft_int0() {
       document.getElementById("pp_notprovided").setAttribute("class", "bef_proceed");
       document.getElementById("pp_provided").setAttribute("class", "aft_proceed");
       // Reason for aptness rating must be provided
-      document.getElementsByName("reason_apt")[0].required = true;
+      document.getElementsByName("reason_difficulty")[0].required = true;
       // Get original text excluding target word and punctuations
       var text0_html = document.getElementById("text0").innerHTML;
       warning.setAttribute("class", "bef_proceed");
