@@ -42,7 +42,7 @@ function aft_int0() {
       var text0_html = document.getElementById("text0").innerHTML;
       warning.setAttribute("class", "bef_proceed");
       warning.innerHTML = text0_html;
-      warning.getElementsByClassName("tw")[0].outerHTML = "";
+      warning.getElementsByTagName("em")[0].outerHTML = "";
       text0_excl = formatPuncs(warning.innerText.replace(/\s+/g,' '));
       // Get non-target tokens in original text
       tokens0 = text0_excl.split(" "); 
