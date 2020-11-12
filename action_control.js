@@ -1,13 +1,13 @@
 // TODO: make sure all possible punctuation marks are included
-var puncs2remove = '.,;?!';
+var puncs2remove = ".,;?!…’'";
 
 function formatPuncs(string) {
   return string
-    .split('')
+    .split("")
     .filter(function(character) {
       return puncs2remove.indexOf(character) === -1;
     })
-    .join('');
+    .join("");
 }
 
 function vanishElement(element) {
