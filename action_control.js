@@ -10,6 +10,12 @@ function formatPuncs(string) {
     .join("");
 }
 
+function lowerFirstLetter(string) {
+  first_letter = string[0].toLowerCase();
+  rest = string.substr(1);
+  return first_letter.concat(rest)  
+}
+
 function vanishElement(element) {
         element.innerHTML = "";
         element.setAttribute("class", "bef_proceed");
@@ -45,9 +51,11 @@ function aft_int0() {
       warning.getElementsByTagName("em")[0].outerHTML = "";
       text0_excl = formatPuncs(warning.innerText.replace(/\s+/g,' '));
       // Get non-target tokens in original text
-      tokens0 = text0_excl.split(" "); 
+      // First letter of first word changed to lowercase
+      tokens0 = lowerFirstLetter(text0_excl).split(" "); 
       // Split provided paraphrase into tokens
-      tokens1 = formatPuncs(value_int0).split(" ");
+      // First letter of first word changed to lowercase
+      tokens1 = formatPuncs(lowerFirstLetter(value_int0)).split(" ");
       tokens1.forEach(function map2Original(value) {
         /* Compare the focus token with the token
          * at the beginning of tokens0,
