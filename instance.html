@@ -62,14 +62,16 @@ div.aft_proceed{
       <ul>
         <li><input type="text" class="illustrate" disabled/> the artist has <input type="text" class="illustrate" disabled/> her <input type="text" class="illustrate" disabled/> perfectly <input type="text" class="illustrate" disabled/>.</li>
       </ul>
-      <p>The following changes will not be accepted:</p>
+      <p><strong>The following changes will not be accepted:</strong></p>
       <ul>
         <li>The artist has <input type="text" class="illustrate" disabled/> her <span class="wrong">precisely</span>.</li>
         <li><span class="wrong">She</span> has been <input type="text" class="illustrate" disabled/> <span class="wrong">by the artist</span>.</li>
       </ul>
     </div>
 
-    <p>In addition, please try your best to use literal language to paraphrase the text. A literal text expresses meaning directly, and only contains concepts belonging to the topic that the text is about. In particular, it does not use concrete words if the context is abstract, or abstract words if the context is concrete.</p>
+    <p>If our algorithm thinks your paraphrase modifies any non-target words, it will display <strong>a warning message</strong> when you click the Proceed button. Please click the button again everytime you change your paraphrase.</p>
+
+    <p>In addition, please try your best to use <strong>literal language</strong> to paraphrase the text. A literal text expresses meaning directly, and only contains concepts belonging to the topic that the text is about. In particular, it does not use concrete words if the context is abstract, or abstract words if the context is concrete.</p>
 
     <div class="eg">
       <p>Examples of literal sentences:</p>
@@ -86,10 +88,14 @@ div.aft_proceed{
       </ul>
     </div>
     
-    <p>If you could not decide on a paraphrase, please enter '<span id="value_na">NA</span>' (without the quotation marks) and proceed. Please note, however, that your submission might be rejected if the majority of respondents managed to provide a paraphrase that meets all the requirements.</p>
+    <p>If you could not decide on a paraphrase (e.g., because you think it is impossible to replace the target word with anything else), please enter '<span id="value_na">NA</span>' (without the quotation marks) and Proceed. Please note, however, that your submission might be rejected if the majority of respondents managed to provide a paraphrase that meets all the requirements.</p>
+
+    <p>For MTurkers doing multiple paraphrasing HITs of ours: please be cautious when accepting multiple HITs for <strong>the same target word</strong> (<i>captured</i>, <i>captures</i> and <i>capture</i> are considered the same word). We might have to reject your assignments if the same word is always paraphrased in the same way.</p>
     </full-instructions>
     <div id="mainTask">
-      <p>Please read the instructions and complete the paraphrasing task below.</p>
+      <p>Please <u>read the instructions</u> and complete the paraphrasing task below.</p>
+      <p>We highly recommend that you read the full instructions! While we believe paraphrasing must be super easy for you, what we regard as a <u>usable paraphrase</u> for this particular study might be different from what you would assume or have learned since primary school. We reject assignments that do not meet the basic requirements, so please use your time wisely. Thank you very much.</p>
+      </p>
       <p>
       <strong>Original text: </strong>
       <span class="ref" id="text0">The Conservative manifesto <em>contained</em> a commitment.</span>
