@@ -4,6 +4,10 @@
   <title>Paraphrasing task</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <style>
+#checkbox {
+  margin-top: 30px;
+}
+
 input.illustrate{
   border: none;
   border-bottom: 1px solid black;
@@ -30,27 +34,29 @@ input.illustrate{
 div.aft_proceed{
   margin-top: 65px;
 }
-
   </style>
 </head>
-<body>
+<body style="padding: 5px;">
   <script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
   <script id="myScript" type="text/javascript" src="action_control.js"></script>
   <crowd-form answer-format="flatten-objects">
-    <short-instructions>
-      <p>Paraphrase the given text and answer subsequent questions.</p>
-      <p>
-      Your paraphrase should:
-      <ol>
+    <crowd-instructions link-text="View instructions" link-type="button">
+      <short-summary>
+        <p>Paraphrase the given text by replacing <em>the emphasised word</em> (the target word):
+      <ul>
         <li>Retain the word form and word order of the non-target words.</li>
+        <li>Make sure your paraphrase sounds natural and is grammatically acceptable.</li>
         <li>Use literal language as much as possible.</li>
-        <li>Sound natural and be grammatically acceptable.</li>
-      </ol>
+        <li>Enter 'NA' if you find the task too hard.</li>
+        <li>Return or report the HIT if you could not see any word <em>emphasised</em> in the original text.</li>
+        <li>Click the Proceed button everytime you change the paraphrase you would like to submit.</li>
+      </ul>
       </p>
-      <p><i>Please read the full instructions carefully before working on the task.</i></p>
-    </short-instructions>
-    <full-instructions header="Full instructions of the paraphrasing task">
-      <p>Please paraphrase the given text by rewording <em>the emphasised word</em> (the target word).</p>
+      <p><strong>These HITs will be quality-controlled. Please read the detailed instructions carefully if this is your first time doing our paraphrasing task.</strong></p>
+      </short-summary>
+      <detailed-instructions>
+        <div>
+        <strong>Replacing the target word</strong>
     <p>You could use words or phrases in place of the target word, and/or insert words between any of the non-target words in the text, as long as the non-target words retain their original word form and word order, and the resulting paraphrase sounds natural and is grammatically acceptable.</p>
 
     <div class="eg">
@@ -62,16 +68,18 @@ div.aft_proceed{
       <ul>
         <li><input type="text" class="illustrate" disabled/> the artist has <input type="text" class="illustrate" disabled/> her <input type="text" class="illustrate" disabled/> perfectly <input type="text" class="illustrate" disabled/>.</li>
       </ul>
-      <p><strong>The following changes will not be accepted:</strong></p>
+      <p>The following changes will <em>not</em> be accepted:</p>
       <ul>
         <li>The artist has <input type="text" class="illustrate" disabled/> her <span class="wrong">precisely</span>.</li>
         <li><span class="wrong">She</span> has been <input type="text" class="illustrate" disabled/> <span class="wrong">by the artist</span>.</li>
       </ul>
     </div>
 
-    <p>If our algorithm thinks your paraphrase modifies any non-target words, it will display <strong>a warning message</strong> when you click the Proceed button. Please click the button again everytime you change your paraphrase.</p>
-
-    <p>In addition, please try your best to use <strong>literal language</strong> to paraphrase the text. A literal text expresses meaning directly, and only contains concepts belonging to the topic that the text is about. In particular, it does not use concrete words if the context is abstract, or abstract words if the context is concrete.</p>
+    <p>If our algorithm thinks your paraphrase modifies any non-target words, it will display <em>a warning message</em> when you click the Proceed button. Please click the button again everytime you change your paraphrase.</p>
+        </div>
+        <div>
+        <strong>Literal language</strong>
+    <p>A sentence uses literal language if it expresses meaning directly and only contains concepts belonging to the topic that the sentence is about. In particular, it does not use concrete words if the context is abstract or the other way around.</p>
 
     <div class="eg">
       <p>Examples of literal sentences:</p>
@@ -87,14 +95,38 @@ div.aft_proceed{
         <li>I wouldn't want her to have a <span class="wrong">rough</span> time.</li>
       </ul>
     </div>
-    
-    <p>If you could not decide on a paraphrase (e.g., because you think it is impossible to replace the target word with anything else), please enter '<span id="value_na">NA</span>' (without the quotation marks) and Proceed. Please note, however, that your submission might be rejected if the majority of respondents managed to provide a paraphrase that meets all the requirements.</p>
+        </div>
 
-    <p>For MTurkers doing multiple paraphrasing HITs of ours: please be cautious when accepting multiple HITs for <strong>the same target word</strong> (<i>captured</i>, <i>captures</i> and <i>capture</i> are considered the same word). We might have to reject your assignments if the same word is always paraphrased in the same way.</p>
-    </full-instructions>
+        <div><strong>Entering 'NA' in the paraphrase field</strong>
+    <p>If you could not decide on a paraphrase (e.g., because you think it is impossible to replace the target word with anything else), please enter '<span id="value_na">NA</span>' (without the quotation marks) and Proceed. Please note, however, that your submission might be rejected if the majority of respondents managed to provide a paraphrase that meets all the requirements.</p>
+        </div>
+
+        <div><strong>Encountering the same target word</strong>
+    <p>Please be cautious when accepting multiple HITs for the same target word (<i>captured</i>, <i>captures</i> and <i>capture</i> are considered the same word). We might have to reject your assignments if the same word is always paraphrased in the same way.</p>
+        </div>
+
+        <div id="checkbox">
+          <p>
+          <crowd-checkbox name="instructionsRead">
+            I have read all the instructions.
+          </crowd-checkbox>
+          <br /><em>Please check to indicate you have read the instructions; otherwise we may have to exclude you from further HITs. You only have to do this once.</em>
+          </p>
+        </div>
+      </detailed-instructions>
+      <positive-example>
+        See the detailed instructions
+      </positive-example>
+      <negative-example>
+        See the detailed instructions
+      </negative-example>
+    </crowd-instructions>
+
     <div id="mainTask">
-      <p>Please <u>read the instructions</u> and complete the paraphrasing task below.</p>
-      <p>We highly recommend that you read the full instructions! While we believe paraphrasing must be super easy for you, what we regard as a <u>usable paraphrase</u> for this particular study might be different from what you would assume or have learned since primary school. We reject assignments that do not meet the basic requirements, so please use your time wisely. Thank you very much.</p>
+
+      <p><strong>Please read the instructions if this is your first time doing this paraphrasing task.</strong></p>
+      <p>While paraphrasing must be super easy for you, what we regard as <em>usable paraphrases</em> for this particular study might be different from what you would assume or have learned since primary school. We reject assignments that do not meet the basic requirements, so please use your time wisely. Thank you very much.</p>
+
       <p>
       <strong>Original text: </strong>
       <span class="ref" id="text0">The Conservative manifesto <em>contained</em> a commitment.</span>
@@ -131,8 +163,12 @@ div.aft_proceed{
     </div>
 
     <div class="bef_proceed" id="comments_regardless">
-      <span>If you have any comments/feeback on this task, you can leave them below. This is optional, but your help will be appreciated.</span>
-      <crowd-text-area name="comments" rows="1"></crowd-text-area>
+      <p><span>If you have any comments/feeback on this task, you can leave them below. This is optional, but your help will be appreciated.</span>
+      <crowd-text-area name="comments" rows="1"></crowd-text-area></p>
+
+      <crowd-button form-action="submit">
+        Submit
+      </crowd-button>
     </div>
   </crowd-form>
 </body>
