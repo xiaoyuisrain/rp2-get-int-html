@@ -49,40 +49,41 @@ div.aft_proceed{
         <li>Retain the word form and word order of the non-target words.</li>
         <li>Make sure your paraphrase sounds natural and is grammatically acceptable.</li>
         <li>Use literal language as much as possible.</li>
-        <li>Enter 'NA' if you find the task too hard.</li>
+        <li>Enter 'NA' for texts you deem impossible to paraphrase.</li>
         <li>Return or report the HIT if you could not see any word <em>emphasised</em> in the original text.</li>
         <li>Click the Proceed button everytime you change the paraphrase you would like to submit.</li>
       </ul>
       </p>
-      <p><strong>These HITs will be quality-controlled. Please read the detailed instructions carefully if this is your first time doing our paraphrasing task.</strong></p>
+      <p><strong>These HITs will be quality-controlled. Please read the detailed instructions carefully if this is your first time doing our paraphrasing task after 3 December 2020.</strong></p>
       </short-summary>
       <detailed-instructions>
         <div>
-        <strong>Replacing the target word</strong>
+        <h2>Replacing the target word</h2>
     <p>You could use words or phrases in place of the target word, and/or insert words between any of the non-target words in the text, as long as the non-target words retain their original word form and word order, and the resulting paraphrase sounds natural and is grammatically acceptable.</p>
 
     <div class="eg">
       <p>For example, to paraphrase the sentence below:</p>
       <ul>
-        <li>The artist has <em class="tw">captured</em> her perfectly.</li>
+        <li>The artist has <em>captured</em> her perfectly.</li>
       </ul>
       <p>You could insert one or more words in one or all of the blanks:</p>
       <ul>
         <li><input type="text" class="illustrate" disabled/> the artist has <input type="text" class="illustrate" disabled/> her <input type="text" class="illustrate" disabled/> perfectly <input type="text" class="illustrate" disabled/>.</li>
       </ul>
-      <p>The following changes will <em>not</em> be accepted:</p>
+      <p>The following changes will <strong>not</strong> be accepted:</p>
       <ul>
         <li>The artist has <input type="text" class="illustrate" disabled/> her <span class="wrong">precisely</span>.</li>
         <li><span class="wrong">She</span> has been <input type="text" class="illustrate" disabled/> <span class="wrong">by the artist</span>.</li>
       </ul>
     </div>
 
-    <p>If our algorithm thinks your paraphrase modifies any non-target words, it will display <em>a warning message</em> when you click the Proceed button. Please click the button again everytime you change your paraphrase.</p>
-    <p>Please also <em>avoid</em> using words in which the target word is somewhat present. For example, please do not substitute the verb <i class="tw">connect</i> with phrases containing <i class="wrong">connection</i> or <i class="wrong">disconnect</i>; inflected forms (<i class="wrong">connects</i>, <i class="wrong">connected</i>, and <i class="wrong">connecting</i>) will not be accepted either.</p>
+    <p>We do not provide more concrete examples at this stage, as we are interested in your perception of apt paraphrases.</p>
+    <p>If our algorithm thinks your paraphrase modifies any non-target words, it will display <strong>a warning message</strong> when you click the Proceed button. Please click the button again everytime you change your paraphrase.</p>
+    <p>Please also <strong>avoid</strong> using words in which the target word is somewhat present. For example, please do not substitute the verb <i>connect</i> with phrases containing <i class="wrong">connection</i> or <i class="wrong">disconnect</i>; inflected forms (<i class="wrong">connects</i>, <i class="wrong">connected</i>, and <i class="wrong">connecting</i>) will not be accepted either.</p>
         </div>
-        <div>
-        <strong>Literal language</strong>
-    <p>A sentence uses literal language if it expresses meaning directly and only contains concepts belonging to the topic that the sentence is about. In particular, it does not use concrete words if the context is abstract or the other way around.</p>
+        <div><h2>Literalness vs aptness</h2>
+        <p>A sentence uses <strong>literal language</strong> if it conveys meaning directly, describing an object or an event as it is, and using words that are typically associated with the object or event. Literal language constrasts with figurative language, which can take the form of metaphor, personification, simile, idiom, pun, hyperbole, etc.</p>
+        <p>Please note that the literalness of your paraphrase should be measured independently of the original text. A paraphrase could use literal language entirely but fails to convey the meaning of the original text; we call such a paraphrase an <strong>inapt paraphrase</strong> instead of a non-literal paraphrase. Please keep this difference in mind when answering the rating questions.</p>
 
     <div class="eg">
       <p>Examples of literal sentences:</p>
@@ -100,11 +101,12 @@ div.aft_proceed{
     </div>
         </div>
 
-        <div><strong>Entering 'NA' in the paraphrase field</strong>
-    <p>If you could not decide on a paraphrase (e.g., because you think it is impossible to replace the target word with anything else), please enter '<span id="value_na">NA</span>' (without the quotation marks) and Proceed. Please note, however, that your submission might be rejected if the majority of respondents managed to provide a paraphrase that meets all the requirements.</p>
+        <div><h2>Entering 'NA' in the paraphrase field</h2>
+          <p>If you think it is impossible for anyone to paraphrase the given text as instructed, please enter '<span id="value_na">NA</span>' (without the quotation marks) and Proceed; you will be directed to provide a reason why you think the task is impossible. We value your opinion on impossible paraphrasing tasks as much as valid paraphrases of texts that can be paraphrased.</p>
+          <p>On the other hand, if you are not sure whether your reasoning will be accepted, please return the HIT.</p>
         </div>
 
-        <div><strong>Encountering the same target word</strong>
+        <div><h2>Encountering the same target word</h2>
     <p>Please be cautious when accepting multiple HITs for the same target word (<i>captured</i>, <i>captures</i> and <i>capture</i> are considered the same word). We might have to reject your assignments if the same word is always paraphrased in the same way.</p>
         </div>
 
@@ -127,7 +129,7 @@ div.aft_proceed{
 
     <div id="mainTask">
 
-      <p><strong>Please read the instructions if this is your first time doing this paraphrasing task.</strong></p>
+      <p><strong>Please read the instructions if this is your first time doing this paraphrasing task after 3 December 2020.</strong></p>
       <p>While paraphrasing must be super easy for you, what we regard as <em>usable paraphrases</em> for this particular study might be different from what you would assume or have learned since primary school. We reject assignments that do not meet the basic requirements, so please use your time wisely. Thank you very much.</p>
 
       <p>
@@ -145,17 +147,21 @@ div.aft_proceed{
     <p class="bef_proceed" id="compare_warn"></p>
   
     <div class="bef_proceed" id="pp_provided">
-      <p>Please use the sliders below to indicate how much you agree with the statements (1 = strongly disagree, 5 = strongly agree).</p>
+      <p>Please use the sliders below to indicate how much you agree with the statements (-2 = strongly disagree, 2 = strongly agree).</p>
       <ul>
         <li>
           <p>It was difficult to paraphrase the given text.</p>
-          <p><crowd-slider name="difficulty" min="1" max="5" step="1" pin></crowd-slider></p>
+          <p><crowd-slider name="difficult" min="-2" max="2" step="1" pin></crowd-slider></p>
           <span>Why do you rate the difficulty of the task as such?</span>
-          <crowd-text-area name="reason_difficulty" spellcheck="true" rows="1"></crowd-text-area>
+          <crowd-text-area name="reasonDifficultyRating" spellcheck="true" rows="1"></crowd-text-area>
         </li>
         <li>
-          <p>Your paraphrase uses literal language.</p>
-          <p><crowd-slider name="literalness" min="1" max="5" step="1" pin></crowd-slider></p>
+          <p>You have provided an apt paraphrase of the original text.</p>
+          <p><crowd-slider name="apt" min="-2" max="2" step="1" pin></crowd-slider></p>
+        </li>
+        <li>
+          <p>Your paraphrase uses literal language. <i>(Please follow the definition of literal language in the instructions)</i></p>
+          <p><crowd-slider name="literal" min="-2" max="2" step="1" pin></crowd-slider></p>
         </li>
       </ul>
     </div>
@@ -166,7 +172,7 @@ div.aft_proceed{
     </div>
 
     <div class="bef_proceed" id="comments_regardless">
-      <p><span>If you have any comments/feeback on this task, you can leave them below. This is optional, but your help will be appreciated.</span>
+      <p><span><i>(Optional)</i> If you have any comments on this task, or there are anything else you would like to tell us about your paraphrase, you can leave them below. Thank you in advance!</span>
       <crowd-text-area name="comments" rows="1"></crowd-text-area></p>
 
       <crowd-button form-action="submit">
