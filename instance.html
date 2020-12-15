@@ -48,13 +48,44 @@ div.aft_proceed{
       <ul>
         <li>Retain the word form and word order of the non-target words.</li>
         <li>Make sure your paraphrase sounds natural and is grammatically acceptable.</li>
-        <li>Use literal language as much as possible.</li>
+        <li>Use literal language in your paraphrase.</li>
         <li>Enter 'NA' for texts you deem impossible to paraphrase.</li>
         <li>Return or report the HIT if you could not see any word <em>emphasised</em> in the original text.</li>
         <li>Click the Proceed button everytime you change the paraphrase you would like to submit.</li>
       </ul>
       </p>
-      <p><strong>These HITs will be quality-controlled. Please read the detailed instructions carefully if this is your first time doing our paraphrasing task after 3 December 2020.</strong></p>
+      <strong>
+        <p>These HITs will be quality-controlled. Please read the detailed instructions carefully and complete the quiz below. You only have to do this <em>once</em>.</p>
+      </strong>
+
+      <div id="quiz">
+          <h2>Quiz 1</h2>
+          <p>Select <strong>all</strong> of the candidate paraphrases that will be <strong>rejected</strong> directly, without considering answers to subsequent questions.</p>
+
+          <p><strong>Original text: </strong>The price <em>includes</em> dinner, bed, and breakfast.</p>
+          <p><strong>Candidate paraphrases: </strong>
+          <ol>
+            <li><crowd-checkbox name="tw_quiz" value="a">Dinner, bed, and breakfast are covered by the price.</crowd-checkbox></li>
+            <li><crowd-checkbox name="tw_quiz" value="b">The amount covers bed and two meals.</crowd-checkbox></li>
+            <li><crowd-checkbox name="tw_quiz" value="c">The price covers dinner, bed, and breakfast.</crowd-checkbox></li>
+            <li><crowd-checkbox name="tw_quiz" value="d">With the price, there will be no extra fees for dinner, bed, and breakfast.</crowd-checkbox></li>
+            <li><crowd-checkbox name="tw_quiz" value="e">Included in the price, among other things, are dinner, bed, and breakfast.</crowd-checkbox></li>
+          </ol>
+          </p>
+
+          <h2>Quiz 2</h2>
+          <p>Select <strong>all</strong> of the sentences below that only use <strong>literal</strong> language.</p>
+          <ol>
+            <li><crowd-checkbox name="lit_quiz" value="bmw_2814">I haven't even mentioned a single detail of the Mattli collection.</crowd-checkbox></li>
+            <li><crowd-checkbox name="lit_quiz" value="a8m_70">A User's Guide is stupid, negative and insulting.</crowd-checkbox></li>
+            <li><crowd-checkbox name="lit_quiz" value="clw_42">For adolescents the acquisition of a clear ego-identity is the crucial task.</crowd-checkbox></li>
+            <li><crowd-checkbox name="lit_quiz" value="faj_1834">A young white policeman appears from his office reluctantly.</crowd-checkbox></li>
+            <li><crowd-checkbox name="lit_quiz" value="a7s_76">It wasn't the only programme last night to shine light into dirty corners.</crowd-checkbox></li>
+          </ol>
+
+
+      </div>
+
       </short-summary>
       <detailed-instructions>
         <div>
@@ -110,14 +141,6 @@ div.aft_proceed{
     <p>Please be cautious when accepting multiple HITs for the same target word (<i>captured</i>, <i>captures</i> and <i>capture</i> are considered the same word). We might have to reject your assignments if the same word is always paraphrased in the same way.</p>
         </div>
 
-        <div id="checkbox">
-          <p>
-          <crowd-checkbox name="instructionsRead">
-            I have read all the instructions.
-          </crowd-checkbox>
-          <br /><em>Please check to indicate you have read the instructions; otherwise we may have to exclude you from further HITs. You only have to do this once.</em>
-          </p>
-        </div>
       </detailed-instructions>
       <positive-example>
         See the detailed instructions
@@ -129,8 +152,13 @@ div.aft_proceed{
 
     <div id="mainTask">
 
-      <p><strong>Please read the instructions if this is your first time doing this paraphrasing task after 3 December 2020.</strong></p>
+      <strong>
+      <p>Please read the instructions if this is your first time doing this paraphrasing task after 3 December 2020.</p>
+      <p>Please do not accept this HIT if you have not received approval or feedback on previous submissions.</p>
+      </strong>
+      <!--
       <p>While paraphrasing must be super easy for you, what we regard as <em>usable paraphrases</em> for this particular study might be different from what you would assume or have learned since primary school. We reject assignments that do not meet the basic requirements, so please use your time wisely. Thank you very much.</p>
+      -->
 
       <p>
       <strong>Original text: </strong>
