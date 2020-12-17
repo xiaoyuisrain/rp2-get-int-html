@@ -4,16 +4,22 @@
   <title>Paraphrasing task</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <style>
-#checkbox {
-  margin-top: 30px;
+#nonlit_egs li {
+  padding-bottom: 15px;
+}
+
+.explain_met {
+  font-style: italic;
+}
+
+ol.quiz_choices {
+  list-style-type:lower-alpha;
 }
 
 input.illustrate{
   border: none;
   border-bottom: 1px solid black;
 }
-
-.tw {color:blue;}
 
 .eg {
   padding-left: 50px;
@@ -54,38 +60,7 @@ div.aft_proceed{
         <li>Click the Proceed button everytime you change the paraphrase you would like to submit.</li>
       </ul>
       </p>
-      <strong>
-        <p>These HITs will be quality-controlled. Please read the detailed instructions carefully and complete the quiz below. You only have to do this <em>once</em>.</p>
-      </strong>
-
-      <div id="quiz">
-          <h2>Quiz 1</h2>
-          <p>Select <strong>all</strong> of the candidate paraphrases that will be <strong>rejected</strong> directly, without considering answers to subsequent questions.</p>
-
-          <p><strong>Original text: </strong>The price <em>includes</em> dinner, bed, and breakfast.</p>
-          <p><strong>Candidate paraphrases: </strong>
-          <ol>
-            <li><crowd-checkbox name="tw_quiz" value="swap">Dinner, bed, and breakfast are covered by the price.</crowd-checkbox></li>
-            <li><crowd-checkbox name="tw_quiz" value="nontarget">The amount covers bed and two meals.</crowd-checkbox></li>
-            <li><crowd-checkbox name="tw_quiz" value="replace">The price covers dinner, bed, and breakfast.</crowd-checkbox></li>
-            <li><crowd-checkbox name="tw_quiz" value="add">With the price, there will be no extra fees for dinner, bed, and breakfast.</crowd-checkbox></li>
-            <li><crowd-checkbox name="tw_quiz" value="inflected">Included in the price, among other things, are dinner, bed, and breakfast.</crowd-checkbox></li>
-          </ol>
-          </p>
-
-          <h2>Quiz 2</h2>
-          <p>Select <strong>all</strong> of the sentences below that only use <strong>literal</strong> language.</p>
-          <ol>
-            <li><crowd-checkbox name="lit_quiz" value="bmw_2814">I haven't even mentioned a single detail of the Mattli collection.</crowd-checkbox></li>
-            <li><crowd-checkbox name="lit_quiz" value="a8m_70">A User's Guide is stupid, negative and insulting.</crowd-checkbox></li>
-            <li><crowd-checkbox name="lit_quiz" value="clw_42">For adolescents the acquisition of a clear ego-identity is the crucial task.</crowd-checkbox></li>
-            <li><crowd-checkbox name="lit_quiz" value="faj_1834">A young white policeman appears from his office reluctantly.</crowd-checkbox></li>
-            <li><crowd-checkbox name="lit_quiz" value="a7s_76">It wasn't the only programme last night to shine light into dirty corners.</crowd-checkbox></li>
-          </ol>
-
-
-      </div>
-
+        <p><strong>This HIT will be quality-controlled.</strong> Please demonstrate that you have read the instructions by completing the quiz at the bottom of the detailed instructions tab. Not completing the quiz will exclude you from our further HITs; poor performance in the quiz or inconsistency between your answers to the quiz and to the main questions will lead to rejection of your assignment(s). You only have to do this <em>once</em>.</p>
       </short-summary>
       <detailed-instructions>
         <div>
@@ -101,7 +76,7 @@ div.aft_proceed{
       <ul>
         <li><input type="text" class="illustrate" disabled/> the artist has <input type="text" class="illustrate" disabled/> her <input type="text" class="illustrate" disabled/> perfectly <input type="text" class="illustrate" disabled/>.</li>
       </ul>
-      <p>The following changes will <strong>not</strong> be accepted:</p>
+      <p>The following changes will <em>not</em> be accepted:</p>
       <ul>
         <li>The artist has <input type="text" class="illustrate" disabled/> her <span class="wrong">precisely</span>.</li>
         <li><span class="wrong">She</span> has been <input type="text" class="illustrate" disabled/> <span class="wrong">by the artist</span>.</li>
@@ -110,11 +85,11 @@ div.aft_proceed{
 
     <p>We do not provide more concrete examples at this stage, as we are interested in your perception of apt paraphrases.</p>
     <p>If our algorithm thinks your paraphrase modifies any non-target words, it will display <strong>a warning message</strong> when you click the Proceed button. Please click the button again everytime you change your paraphrase.</p>
-    <p>Please also <strong>avoid</strong> using words in which the target word is somewhat present. For example, please do not substitute the verb <i>connect</i> with phrases containing <i class="wrong">connection</i> or <i class="wrong">disconnect</i>; inflected forms (<i class="wrong">connects</i>, <i class="wrong">connected</i>, and <i class="wrong">connecting</i>) will not be accepted either.</p>
+    <p>Please also <em>avoid</em> using words in which the target word is somewhat present. For example, please do not substitute the verb <i>connect</i> with phrases containing <i class="wrong">connection</i> or <i class="wrong">disconnect</i>; inflected forms (<i class="wrong">connects</i>, <i class="wrong">connected</i>, and <i class="wrong">connecting</i>) will not be accepted either.</p>
         </div>
+
         <div><h2>Literalness vs aptness</h2>
           <p>The paraphrase you submit should be an apt paraphrase (obviously) that uses literal language. A sentence uses <strong>literal language</strong> if it conveys meaning directly, describing an object or an event as it is, and using words that are typically associated with the object or event. Literal language constrasts with figurative language, which can take the form of metaphor, personification, simile, idiom, pun, hyperbole, etc.</p>
-        <p>Please note that the literalness of your paraphrase should be measured independently of the original text. A paraphrase could use literal language entirely but fails to convey the meaning of the original text; we call such a paraphrase an <strong>inapt paraphrase</strong> instead of a non-literal paraphrase. Please keep this difference in mind when answering the rating questions.</p>
 
     <div class="eg">
       <p>Examples of literal sentences:</p>
@@ -124,12 +99,18 @@ div.aft_proceed{
         <li>The diagrams are updated periodically during the course of the simulation.</li>
       </ul>
       <p>Examples of non-literal sentences:</p>
-      <ul>
-        <li>And tell me, <span class="wrong">sweet</span> creature, do you <span class="wrong">count</span> as a <span class="wrong">toy</span>?</li>
-        <li>No longer can the Government <span class="wrong">disguise</span> the crisis <span class="wrong">surrounding</span> electricity privatisation.</li>
-        <li>I wouldn't want her to have a <span class="wrong">rough</span> time.</li>
+      <ul id="nonlit_egs">
+        <li>And tell me, <span class="wrong">sweet</span> creature, do you <span class="wrong">count</span> as a <span class="wrong">toy</span>?
+          <ul class="explain_met">
+            <li><u>Sweet</u> refers to a sugary taste. As it is unlikely that the person being referred to as <q>sweet creature</q> has a sugary taste, the usage is non-literal.</li>
+            <li>People are not toys, so the comparison between the person and toys is also non-literal.</li>
+            <li><u>Count</u> refers to an abstract thinking process in this sentence, of considering whether a person belongs to a particular category. As the word has a more concrete meaning of calculating the number of objects, its usage here is non-literal.</li>
+          </ul>
+        <li>No longer can the Government <span class="wrong">disguise</span> the crisis <span class="wrong">surrounding</span> electricity privatisation.<br /><span class="explain_met">Both <u>disguise</u> and <u>surround</u> have a more concrete meaning than their meaning in this sentence.</span></li>
+        <li>I wouldn't want her to have a <span class="wrong">rough</span> time.<br /><span class="explain_met"><u>Rough</u> refers to the texture of a surface, how the surface of something feels against your skin. Time apparently does not have a surface for us to touch; the usage is therefore non-literal.</span></li>
       </ul>
     </div>
+        <p>Please note that the literalness of your paraphrase should be measured independently of the original text. A paraphrase could use literal language entirely but fails to convey the meaning of the original text; we call such a paraphrase an <strong>inapt paraphrase</strong> instead of a non-literal paraphrase. Please keep this difference in mind when answering the rating questions.</p>
         </div>
 
         <div><h2>Entering 'NA' in the paraphrase field</h2>
@@ -140,6 +121,31 @@ div.aft_proceed{
         <div><h2>Encountering the same target word</h2>
     <p>Please be cautious when accepting multiple HITs for the same target word (<i>captured</i>, <i>captures</i> and <i>capture</i> are considered the same word). We might have to reject your assignments if the same word is always paraphrased in the same way.</p>
         </div>
+
+      <div id="quiz">
+          <h2>Quiz</h2>
+          <p>1. Select <em>all</em> of the candidate paraphrases that will be <em>rejected</em> directly, without considering answers to subsequent questions.</p>
+
+          <p><strong>Original text: </strong>The price <em>includes</em> dinner, bed, and breakfast.</p>
+          <p><strong>Candidate paraphrases: </strong>
+        <ol class="quiz_choices">
+            <li><crowd-checkbox name="tw_quiz" value="swap">Dinner, bed, and breakfast are covered by the price.</crowd-checkbox></li>
+            <li><crowd-checkbox name="tw_quiz" value="nontarget">The amount covers bed and two meals.</crowd-checkbox></li>
+            <li><crowd-checkbox name="tw_quiz" value="replace">The price covers dinner, bed, and breakfast.</crowd-checkbox></li>
+            <li><crowd-checkbox name="tw_quiz" value="add">With the price, there will be no extra fees for dinner, bed, and breakfast.</crowd-checkbox></li>
+            <li><crowd-checkbox name="tw_quiz" value="inflected">Included in the price, among other things, are dinner, bed, and breakfast.</crowd-checkbox></li>
+          </ol>
+          </p>
+
+          <p>2. Select <em>all</em> of the sentences below that only use <em>literal</em> language.</p>
+        <ol class="quiz_choices">
+            <li><crowd-checkbox name="lit_quiz" value="a1m_9">Software programmes for word processing, accounting and business planning are also essential.</crowd-checkbox></li>
+            <li><crowd-checkbox name="lit_quiz" value="a8m_70">A User's Guide is stupid, negative and insulting.</crowd-checkbox></li>
+            <li><crowd-checkbox name="lit_quiz" value="clw_42">For adolescents the acquisition of a clear ego-identity is the crucial task.</crowd-checkbox></li>
+            <li><crowd-checkbox name="lit_quiz" value="appear_2_1">One day a stranger appeared on my doorstep.</crowd-checkbox></li>
+            <li><crowd-checkbox name="lit_quiz" value="a7s_76">It wasn't the only programme last night to shine light into dirty corners.</crowd-checkbox></li>
+        </ol>
+      </div>
 
       </detailed-instructions>
       <positive-example>
@@ -153,7 +159,7 @@ div.aft_proceed{
     <div id="mainTask">
 
       <strong>
-      <p>Please read the instructions if this is your first time doing this paraphrasing task after 3 December 2020.</p>
+      <p>Please read the instructions if this is your first time doing this task.</p>
       <p>Please do not accept this HIT if you have not received approval or feedback on previous submissions.</p>
       </strong>
       <!--
