@@ -22,7 +22,9 @@ input.illustrate{
 }
 
 .eg {
-  padding-left: 50px;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .wrong {
   color:red;
@@ -56,16 +58,26 @@ div.aft_proceed{
         <li>Make sure your paraphrase sounds natural and is grammatically acceptable.</li>
         <li>Use literal language (as is defined in the instructions) in your paraphrase.</li>
         <li>Enter 'NA' for texts you deem impossible to paraphrase.</li>
+        <!--
         <li>Return or report the HIT if you could not see any word <em>emphasised</em> in the original text.</li>
+        -->
         <li>Click the Proceed button everytime you change the paraphrase you would like to submit.</li>
       </ul>
       </p>
-        <p><strong>This HIT will be quality-controlled.</strong> Please demonstrate that you have read the instructions by completing the quiz at the bottom of the detailed instructions tab. Not completing the quiz will exclude you from our further HITs; poor performance in the quiz or inconsistency between your answers to the quiz and to the main questions will lead to rejection of your assignment(s). You only have to do this <em>once</em>.</p>
+      <p><strong>This HIT will be quality-controlled.</strong> Please demonstrate that you have read the full instructions by <strong>completing the quiz at the bottom of the detailed instructions tab</strong>. Not completing the quiz will <strong>exclude</strong> you from our further HITs; poor performance in the quiz or inconsistency between your answers to the quiz and to the main questions will lead to <strong>rejection</strong> of your assignment(s). You only have to do this <em>once</em>.</p>
+      <p>Please do not hesitate to contact the requester if you have any questions or comments. Thank you in advance!</p>
       </short-summary>
       <detailed-instructions>
         <div>
         <h2>Replacing the target word</h2>
-    <p>You could use words or phrases in place of the target word, and/or insert words between any of the non-target words in the text, as long as the non-target words retain their original word form and word order, and the resulting paraphrase sounds natural and is grammatically acceptable.</p>
+    <p>
+    You could substitute the target word with one or more words and/or insert words anywhere in the text, as long as:
+    <ol>
+      <li>the target word is not present in your paraphrase,</li>
+      <li>the non-target words retain their original word form and word order, and</li>
+      <li>the resulting paraphrase sounds natural and is grammatically acceptable.</li>
+    </ol>
+    </p>
 
     <div class="eg">
       <p>For example, to paraphrase the sentence below:</p>
@@ -110,16 +122,18 @@ div.aft_proceed{
         <li>I wouldn't want her to have a <span class="wrong">rough</span> time.<br /><span class="explain_met"><u>Rough</u> refers to the texture of a surface, how the surface of something feels against your skin. Time apparently does not have a surface for us to touch; the usage is therefore non-literal.</span></li>
       </ul>
     </div>
-    <p>Please note that the literalness of your paraphrase should be considered independently of the original text. A paraphrase could use only literal language, but fail to convey the meaning of the original text. This paraphrase would be <strong>literal but inapt</strong>. On the other hand, a paraphrase could convey the meaning of the original text, but use non-literal language. This paraphrase would be <strong>apt but non-literal</strong>. Your aim is to provide paraphrases that do convey the meaning of the original text, and use only literal language; these paraphrases would be <strong>apt and literal</strong>. Of course, you may not be able to find the perfect literal and apt paraphrase. Just do the best you can, and keep the difference between literalness and aptness in mind when answering the rating questions.</p>
+    <p>Please note that the literalness of your paraphrase should be considered independently of the original text, and is therefore different from the aptness of the paraphrase. A paraphrase could use only literal language, but fail to convey the meaning of the original text. This paraphrase would be <strong>literal but inapt</strong>. On the other hand, a paraphrase could convey the meaning of the original text, but use non-literal language. This paraphrase would be <strong>apt but non-literal</strong>. Your aim is to provide paraphrases that do convey the meaning of the original text, and use only literal language; these paraphrases would be <strong>apt and literal</strong>. Of course, you may not be able to find the perfect literal and apt paraphrase. Just do the best you can, and keep the difference between literalness and aptness in mind when answering the rating questions.</p>
         </div>
 
         <div><h2>Entering 'NA' in the paraphrase field</h2>
-          <p>If you think it is impossible for anyone to paraphrase the given text as instructed, please enter '<span id="value_na">NA</span>' (without the quotation marks) and Proceed; you will be directed to provide a reason why you think the task is impossible. We value your opinion on impossible paraphrasing tasks as much as valid paraphrases of texts that can be paraphrased.</p>
-          <p>On the other hand, if you are not sure whether your reasoning will be accepted, please return the HIT.</p>
+          <p>If you think it is impossible for <em>anyone</em> to paraphrase the given text <em>as instructed</em>, please enter '<span id="value_na">NA</span>' (without the quotation marks) and Proceed; you will be directed to provide a reason why you think the task is impossible. We value your opinion on impossible paraphrasing tasks as much as valid paraphrases of texts that can be paraphrased.</p>
+          <p>On the other hand, if you are worried about rejections, please do not accept the HIT or return it if you have already accepted it.</p>
+          <p>Please do not use 'NA', 'None', 'null', or other similar values in any other text areas.<p>
         </div>
 
         <div><h2>Encountering the same target word</h2>
     <p>Please be cautious when accepting multiple HITs for the same target word (<i>captured</i>, <i>captures</i> and <i>capture</i> are considered the same word). We might have to reject your assignments if the same word is always paraphrased in the same way.</p>
+    <p>We recommend you to skip or return the HIT if you are unsure whether you have paraphrased the target word before.</p>
         </div>
 
       <div id="quiz">
@@ -159,7 +173,7 @@ div.aft_proceed{
     <div id="mainTask">
 
       <strong>
-      <p>Please read the instructions if this is your first time doing this task.</p>
+        <p>Please read the instructions <em>and</em> complete the pretest (the quiz at the bottom of the detailed instructions tab) if this is your first time doing this task.</p>
       <!--
       <p>Please do not accept this HIT if you have not received approval or feedback on previous submissions.</p>
       -->
@@ -192,19 +206,40 @@ div.aft_proceed{
           <crowd-text-area name="reasonDifficultyRating" spellcheck="true" rows="1"></crowd-text-area>
         </li>
         <li>
+          <p>You did <em>not</em> complete the quiz before providing the paraphrase <br />(please do complete it at least once).</p>
+          <p><crowd-slider name="quiz_undone" min="-2" max="2" step="1" pin></crowd-slider></p>
+        </li>
+        <li>
           <p>You have provided an apt paraphrase of the original text.</p>
           <p><crowd-slider name="apt" min="-2" max="2" step="1" pin></crowd-slider></p>
         </li>
         <li>
-          <p>Your paraphrase uses literal language. <i>(Please follow the definition of literal language in the instructions)</i></p>
+          <p>Your paraphrase uses literal language.</p>
           <p><crowd-slider name="literal" min="-2" max="2" step="1" pin></crowd-slider></p>
+        </li>
+        <li>
+          <p>Your paraphrase and ratings were based on our instructions <br />(if not, please revise your answer before submitting the assignment).</p>
+          <p><crowd-slider name="followed_instructions" min="-2" max="2" step="1" pin></crowd-slider></p>
         </li>
       </ul>
     </div>
   
     <div class="bef_proceed" id="pp_notprovided">
-      <span>Please provide the reason(s) that you could not paraphrase the given text:</span>
+      <p><span>Please provide the reason(s) that you could not paraphrase the given text:</span>
       <crowd-text-area name="reason_na" spellcheck="true" rows="1"></crowd-text-area>
+      </p>
+
+      <p>Please use the sliders below to indicate how much you agree with the statements (-2 = strongly disagree, 2 = strongly agree).</p>
+      <ul>
+        <li>
+          <p>You did <em>not</em> complete the quiz before answering the main questions <br />(please do complete it at least once).</p>
+          <p><crowd-slider name="quiz_undone_na" min="-2" max="2" step="1" pin></crowd-slider></p>
+        </li>
+        <li>
+          <p>Your answer was based on our instructions <br />(if not, please revise your answer before submitting the assignment).</p>
+          <p><crowd-slider name="followed_instructions_na" min="-2" max="2" step="1" pin></crowd-slider></p>
+        </li>
+      </ul>
     </div>
 
     <div class="bef_proceed" id="comments_regardless">
