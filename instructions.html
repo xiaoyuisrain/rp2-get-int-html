@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+  <title>Paraphrasing task: full instructions</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <style>
+#nonlit_egs li {
+  padding-bottom: 15px;
+}
+
+.explain_met {
+  font-style: italic;
+}
+
+ol.quiz_choices {
+  list-style-type:lower-alpha;
+}
+
+input.illustrate{
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.eg {
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.wrong {
+  color:red;
+}
+.int {
+  text-decoration: underline;
+  color: blue;
+}
+
+.bef_proceed{
+  display:none;
+}
+.aft_proceed{
+  display:block;
+}
+
+div.aft_proceed{
+  margin-top: 65px;
+}
+  </style>
+</head>
+<body style="padding: 5px;">
+        <div>
+        <h2>Replacing the target word</h2>
+    <p>
+    You could substitute the target word with one or more words and/or insert words anywhere in the text, as long as:
+    <ol>
+      <li>the target word is not present in your paraphrase,</li>
+      <li>the non-target words retain their original word form and word order, and</li>
+      <li>the resulting paraphrase sounds natural and is grammatically acceptable.</li>
+    </ol>
+    </p>
+
+    <div class="eg">
+      <p>For example, to paraphrase the sentence below:</p>
+      <ul>
+        <li>The artist has <em>captured</em> her perfectly.</li>
+      </ul>
+      <p>You could insert one or more words in one or all of the blanks:</p>
+      <ul>
+        <li><input type="text" class="illustrate" disabled/> the artist has <input type="text" class="illustrate" disabled/> her <input type="text" class="illustrate" disabled/> perfectly <input type="text" class="illustrate" disabled/>.</li>
+      </ul>
+      <p>The following changes will <em>not</em> be accepted:</p>
+      <ul>
+        <li>The artist has <input type="text" class="illustrate" disabled/> her <span class="wrong">precisely</span>.</li>
+        <li><span class="wrong">She</span> has been <input type="text" class="illustrate" disabled/> <span class="wrong">by the artist</span>.</li>
+      </ul>
+    </div>
+
+    <p>We do not provide more concrete examples at this stage, as we are interested in your perception of apt paraphrases.</p>
+    <p>If our algorithm thinks your paraphrase modifies any non-target words, it will display <strong>a warning message</strong> when you click the Proceed button. Please click the button again everytime you change your paraphrase.</p>
+    <p>Please also <em>avoid</em> using words in which the target word is somewhat present. For example, please do not substitute the verb <i>connect</i> with phrases containing <i class="wrong">connection</i> or <i class="wrong">disconnect</i>; inflected forms (<i class="wrong">connects</i>, <i class="wrong">connected</i>, and <i class="wrong">connecting</i>) will not be accepted either.</p>
+        </div>
+
+        <div><h2>Literalness vs aptness</h2>
+          <p>The paraphrase you submit should be an <strong>apt paraphrase</strong>, i.e. the paraphrase should convey the meaning of the original text. The paraphrase should also use <strong>literal language</strong>. A sentence uses literal language if it conveys meaning directly, describing an object or an event as it is, and using words that are typically associated with the object or event. Literal language constrasts with figurative language, which can take the form of metaphor, personification, simile, idiom, pun, hyperbole, etc.</p>
+
+    <div class="eg">
+      <p>Examples of literal sentences:</p>
+      <ul>
+        <li>I have to go to my country to see my father.</li>
+        <li>Turnbull busies himself with his clipboard as his reply is translated.</li>
+        <li>The diagrams are updated periodically during the course of the simulation.</li>
+      </ul>
+      <p>Examples of non-literal sentences:</p>
+      <ul id="nonlit_egs">
+        <li>And tell me, <span class="wrong">sweet</span> creature, do you <span class="wrong">count</span> as a <span class="wrong">toy</span>?
+          <ul class="explain_met">
+            <li><u>Sweet</u> refers to a sugary taste. As it is unlikely that the person being referred to as <q>sweet creature</q> has a sugary taste, the usage is non-literal.</li>
+            <li>People are not toys, so the comparison between the person and toys is also non-literal.</li>
+            <li><u>Count</u> refers to an abstract thinking process in this sentence, of considering whether a person belongs to a particular category. As the word has a more concrete meaning of calculating the number of objects, its usage here is non-literal.</li>
+          </ul>
+        <li>No longer can the Government <span class="wrong">disguise</span> the crisis <span class="wrong">surrounding</span> electricity privatisation.<br /><span class="explain_met">Both <u>disguise</u> and <u>surround</u> have a more concrete meaning than their meaning in this sentence.</span></li>
+        <li>I wouldn't want her to have a <span class="wrong">rough</span> time.<br /><span class="explain_met"><u>Rough</u> refers to the texture of a surface, how the surface of something feels against your skin. Time apparently does not have a surface for us to touch; the usage is therefore non-literal.</span></li>
+      </ul>
+    </div>
+    <p>Please note that the literalness of your paraphrase should be considered independently of the original text, and is therefore different from the aptness of the paraphrase. A paraphrase could use only literal language, but fail to convey the meaning of the original text. This paraphrase would be <strong>literal but inapt</strong>. On the other hand, a paraphrase could convey the meaning of the original text, but use non-literal language. This paraphrase would be <strong>apt but non-literal</strong>. Your aim is to provide paraphrases that do convey the meaning of the original text, and use only literal language; these paraphrases would be <strong>apt and literal</strong>. Of course, you may not be able to find the perfect literal and apt paraphrase. Just do the best you can, and keep the difference between literalness and aptness in mind when answering the rating questions.</p>
+        </div>
+
+        <div><h2>Entering <q>NA</q> in the paraphrase field</h2>
+          <p>If you think it is impossible for <em>anyone</em> to paraphrase the given text <em>as instructed</em>, please enter <q><span id="value_na">NA</span></q> (without the quotation marks) and Proceed; you will be directed to provide a reason why you think the task is impossible. We value your opinion on impossible paraphrasing tasks as much as valid paraphrases of texts that can be paraphrased.</p>
+          <p>On the other hand, if you are worried about rejections, please do not accept the HIT or return it if you have already accepted it.</p>
+          <p>Please do not use <q>NA</q>, <q>None</q>, <q>null</q>, or other similar values in any other text areas.<p>
+        </div>
+
+        <div><h2>Encountering the same target word</h2>
+    <p>Please be cautious when accepting multiple HITs for the same target word (<i>captured</i>, <i>captures</i> and <i>capture</i> are considered the same word). We might have to reject your assignments if the same word is always paraphrased in the same way.</p>
+    <p>We recommend you to skip or return the HIT if you are unsure whether you have paraphrased the target word before.</p>
+        </div>
+
+
+</body>
