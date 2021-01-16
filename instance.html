@@ -64,7 +64,6 @@ div.aft_proceed{
         <li>Click the Proceed button everytime you change the paraphrase you would like to submit.</li>
       </ul>
       </p>
-      <p><strong>This HIT will be quality-controlled.</strong> Please demonstrate that you have read the full instructions by <strong>completing the quiz at the bottom of the detailed instructions tab</strong>. Not completing the quiz will <strong>exclude</strong> you from our further HITs; poor performance in the quiz or inconsistency between your answers to the quiz and to the main questions will lead to <strong>rejection</strong> of your assignment(s). You only have to do this <em>once</em>.</p>
       <p>Please do not hesitate to contact the requester if you have any questions or comments. Thank you in advance!</p>
       </short-summary>
       <detailed-instructions>
@@ -175,7 +174,7 @@ div.aft_proceed{
     <div id="mainTask">
 
       <strong>
-        <p>Please read the instructions <em>and</em> complete the pretest (the quiz at the bottom of the detailed instructions tab) if this is your first time doing this task.</p>
+        <p>Paraphrase the given text as instructed and answer a few questions.</p>
       <!--
       <p>Please do not accept this HIT if you have not received approval or feedback on previous submissions.</p>
       -->
@@ -208,20 +207,12 @@ div.aft_proceed{
           <crowd-text-area name="reasonDifficultyRating" spellcheck="true" rows="1"></crowd-text-area>
         </li>
         <li>
-          <p>You did <em>not</em> complete the quiz before providing the paraphrase <br />(please do complete it at least once).</p>
-          <p><crowd-slider name="quiz_undone" min="-2" max="2" step="1" pin></crowd-slider></p>
-        </li>
-        <li>
           <p>You have provided an apt paraphrase of the original text.</p>
           <p><crowd-slider name="apt" min="-2" max="2" step="1" pin></crowd-slider></p>
         </li>
         <li>
           <p>Your paraphrase uses literal language.</p>
           <p><crowd-slider name="literal" min="-2" max="2" step="1" pin></crowd-slider></p>
-        </li>
-        <li>
-          <p>Your paraphrase and ratings were based on our instructions <br />(if not, please revise your answer before submitting the assignment).</p>
-          <p><crowd-slider name="followed_instructions" min="-2" max="2" step="1" pin></crowd-slider></p>
         </li>
       </ul>
     </div>
@@ -230,18 +221,6 @@ div.aft_proceed{
       <p><span>Please provide the reason(s) that you could not paraphrase the given text:</span>
       <crowd-text-area name="reason_na" spellcheck="true" rows="1"></crowd-text-area>
       </p>
-
-      <p>Please use the sliders below to indicate how much you agree with the statements (-2 = strongly disagree, 2 = strongly agree).</p>
-      <ul>
-        <li>
-          <p>You did <em>not</em> complete the quiz before answering the main questions <br />(please do complete it at least once).</p>
-          <p><crowd-slider name="quiz_undone_na" min="-2" max="2" step="1" pin></crowd-slider></p>
-        </li>
-        <li>
-          <p>All of your answers were based on our instructions <br />(if not, please revise your answer before submitting the assignment).</p>
-          <p><crowd-slider name="followed_instructions_na" min="-2" max="2" step="1" pin></crowd-slider></p>
-        </li>
-      </ul>
     </div>
 
     <div class="bef_proceed" id="comments_regardless">
