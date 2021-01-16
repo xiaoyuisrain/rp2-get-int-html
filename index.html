@@ -1,6 +1,6 @@
 <html lang="en">
 <head>
-  <title>Paraphrasing task: full instructions</title>
+  <title>Paraphrasing task instructions</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <style>
 #nonlit_egs li {
@@ -28,6 +28,7 @@ input.illustrate{
 .wrong {
   color:red;
 }
+.change {color: blue;}
 .int {
   text-decoration: underline;
   color: blue;
@@ -46,8 +47,10 @@ div.aft_proceed{
   </style>
 </head>
 <body style="padding: 5px;">
-        <div>
-        <h2>Replacing the target word</h2>
+  <h1>Full instructions for the paraphrasing task</h1>
+  <p>Your job is to paraphrase the given text by replacing the <em>emphasised</em> word (the target word) in the text. Your paraphrase should meet <em>all</em> the requirements specified below.</p>
+
+  <div><h2>Replacing the target word</h2>
     <p>
     You could substitute the target word with one or more words and/or insert words anywhere in the text, as long as:
     <ol>
@@ -58,22 +61,26 @@ div.aft_proceed{
     </p>
 
     <div class="eg">
-      <p>For example, to paraphrase the sentence below:</p>
+      <p>For example, given the following sentence, in which <em>captured</em> if the target word:</p>
       <ul>
         <li>The artist has <em>captured</em> her perfectly.</li>
       </ul>
-      <p>You could insert one or more words in one or all of the blanks:</p>
+      <p>You could consider the following modifications:*</p>
       <ul>
-        <li><input type="text" class="illustrate" disabled/> the artist has <input type="text" class="illustrate" disabled/> her <input type="text" class="illustrate" disabled/> perfectly <input type="text" class="illustrate" disabled/>.</li>
+        <li>The artist has <span class="change">described</span> her perfectly <span class="change">in the picture</span>.</li>
+        <li>The artist has <span class="change">completed a painting that portrays</span> her perfectly.</li>
+        <li><span class="change">In this picture,</span> the artist has <span class="change">shown the characteristics of</span> her perfectly.</li>
       </ul>
-      <p>The following changes will <em>not</em> be accepted:</p>
+      <p>The following paraphrases will be <strong>rejected</strong> directly:</p>
       <ul>
-        <li>The artist has <input type="text" class="illustrate" disabled/> her <span class="wrong">precisely</span>.</li>
-        <li><span class="wrong">She</span> has been <input type="text" class="illustrate" disabled/> <span class="wrong">by the artist</span>.</li>
+        <li>The artist has <span class="wrong">captured</span> her <span class="wrong">precisely</span>.</li>
+        <li>The artist has <span class="change">provided a perfect portrait of</span> her <s class="wrong">perfectly</s>.</li>
+        <li><span class="wrong">She</span> has <span class="change">been pictured</span> perfectly <span class="change">by</span> <span class="wrong">the artist</span>.</li>
       </ul>
     </div>
 
-    <p>We do not provide more concrete examples at this stage, as we are interested in your perception of apt paraphrases.</p>
+    <p>*: <i>These examples are meant to give you an idea of what types of modifications are allowed. They by no means imply what we regard as <strong>apt and literal</strong> paraphrases (see the section on literalness vs aptness below).</i></p>
+
     <p>If our algorithm thinks your paraphrase modifies any non-target words, it will display <strong>a warning message</strong> when you click the Proceed button. Please click the button again everytime you change your paraphrase.</p>
     <p>Please also <em>avoid</em> using words in which the target word is somewhat present. For example, please do not substitute the verb <i>connect</i> with phrases containing <i class="wrong">connection</i> or <i class="wrong">disconnect</i>; inflected forms (<i class="wrong">connects</i>, <i class="wrong">connected</i>, and <i class="wrong">connecting</i>) will not be accepted either.</p>
         </div>
